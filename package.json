@@ -1,0 +1,12 @@
+{
+  "name": "grupo-3",
+  "version": "1.0.0",
+  "description": "Proyecto Ingenieria I- U Cenfotec",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./src/server.js"
+  },
+  "keywords": [],
+  "author": "Grupo 3",
+  "license": "ISC"
+}

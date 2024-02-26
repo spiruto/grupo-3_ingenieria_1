@@ -1,0 +1,18 @@
+/* Variables */
+:root {
+  /* Color Palette */
+  --color-info: #3c91e6ff;
+  --color-success: #9fd356ff;
+  --color-primary: #342e37ff;
+  --color-secondary: #fafffdff;
+  --color-message: #fa824cff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+#content{
+  border: 1px solid black;
+}

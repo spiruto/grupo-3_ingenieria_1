@@ -286,4 +286,9 @@ nav svg {
   body {
     background-color: lightblue;
   }
+
+  /*Estilo Formulario Vendedor */
+  .form-vendedor {
+    margin-bottom: 30%;
+  }
 }

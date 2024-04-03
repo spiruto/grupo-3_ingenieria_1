@@ -45,6 +45,30 @@
             </div>
             <br>
             <div>
+              <label for="Tipo de Cedula">4.</label> 
+              <input type="radio" name="tipoCedula" value ="radio" checked required>Cedula Nacional 
+              <input type="radio" name="tipoCedula" value ="radio"  required>DIMEX
+              <input type="text"  name="numeroCedula"  maxlength="12" required placeholder="Identificacion">
+            </div>
+            <br>
+            <div>
+              <label for="direccion">Dirección:</label>
+              <input type="text" id="direccion" name="direccion" required>
+          </div>
+          <br>
+          <div>
+              <label for="password">Contraseña:</label>
+              <input type="password" id="password" name="password" minlength="8" required>
+              <small>Debe tener mínimo ocho caracteres, al menos un número, una consonante y un carácter especial.</small>
+          </div>
+          <br>
+          <div>
+              <label for="confirm_password">Confirmar Contraseña:</label>
+              <input type="password" id="confirm_password" name="confirm_password" minlength="8" required>
+          </div>
+            
+            <br>
+            <div>
               <label for="comercio">Nombre del Comercio:</label>
               <input type="text" id="comercio" name="comercio" required>
             </div>

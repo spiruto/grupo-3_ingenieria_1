@@ -282,6 +282,14 @@ nav svg {
   align-self: center;
 }
 
+.containerHeaderProductCategories{
+  width: 300px;
+  border: 15px solid green;
+  background-color: red !important;
+  padding: 50px;
+  margin: 20px;
+}
+
 @media only screen and (max-width: 1080) {
   body {
     background-color: lightblue;
@@ -291,4 +299,8 @@ nav svg {
   .formvendedor {
     margin-bottom: 60%;
   }
+
+  /*Estilo Pagina Categorias Productos */
+  
+  
 }

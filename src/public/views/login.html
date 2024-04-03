@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ingenieria I y Grupo 3</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script src="https://kit.fontawesome.com/07863389f0.js" crossorigin="anonymous"></script>
+    <script type="module" src="../../assets/js/views/login.js"></script>
 </head>
-<body>
-   asdasdasdsad 
+
+<body id="root">
+    
+        <div class = "ContainerLogin">
+        <div class="emailInput">
+            <label for="email">Correo electronico:</label>
+            <input type="email" id="email" size="30" required />
+        </div>
+        <div>
+            <label for="pass">contraseña (8 caracteres minimo):</label>
+            <input type="password" id="pass" name="password" minlength="8"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$" required />
+        </div>
+        <form action="#">
+            <input type="submit" value="iniciar sesion" />
+        </form>
+        <div>
+            <p>
+                ¿Olvidaste tu contraseña?
+                <a href="forgot_password.html">Haz clic aquí</a> para restablecerla.
+            </p>
+            <form action="#">
+                <input type="submit" value="crear cuenta" />
+            </form>
+        </div>
+    </div>
+</div>
 </body>
+
+
 </html>

@@ -60,7 +60,7 @@
   padding: 10px;
   padding-top: 2px;
   padding-bottom: 0;
-  
+
 }
 
 #searchBar {
@@ -80,17 +80,18 @@
   color: grey;
 }
 
-#logoNav{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    height: 50px;
-    width: 50px;
-    border-radius: 30%;
-    opacity: 0.8;
-    
+#logoNav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  border-radius: 30%;
+  opacity: 0.8;
+
 }
+
 .button {
   position: absolute;
   right: 0px;
@@ -164,12 +165,14 @@
   padding: 14px 10px;
   text-decoration: none;
 }
+
 .Bottom {
   background: var(--color-primary);
   text-align: center;
   padding: 10px 0;
   color: var(--color-secondary);
 }
+
 .footer-content a:hover,
 .footer-content a.active {
   border-bottom: 3px solid blue;
@@ -286,4 +289,19 @@ nav svg {
   body {
     background-color: lightblue;
   }
+
 }
+
+.ContainerLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3c91e6ff; 
+  flex-direction: column;
+  margin: 30px auto; 
+  padding: 30px; 
+  height: 500px; 
+  width: 500px; 
+}
+
+

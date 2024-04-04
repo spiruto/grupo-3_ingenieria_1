@@ -1,0 +1,86 @@
+[
+    {
+      "id": 1,
+      "image": "product1.jpg",
+      "title": "Product 1",
+      "description": "Description for product 1",
+      "price": "$10.99"
+    },
+    {
+      "id": 2,
+      "image": "product2.jpg",
+      "title": "Product 2",
+      "description": "Description for product 2",
+      "price": "$11.99"
+    },
+    {
+      "id": 3,
+      "image": "product3.jpg",
+      "title": "Product 3",
+      "description": "Description for product 3",
+      "price": "$12.99"
+    },
+    {
+      "id": 4,
+      "image": "product4.jpg",
+      "title": "Product 4",
+      "description": "Description for product 4",
+      "price": "$13.99"
+    },
+    {
+      "id": 5,
+      "image": "product5.jpg",
+      "title": "Product 5",
+      "description": "Description for product 5",
+      "price": "$14.99"
+    },
+    {
+      "id": 6,
+      "image": "product6.jpg",
+      "title": "Product 6",
+      "description": "Description for product 6",
+      "price": "$15.99"
+    },
+    {
+      "id": 7,
+      "image": "product7.jpg",
+      "title": "Product 7",
+      "description": "Description for product 7",
+      "price": "$16.99"
+    },
+    {
+      "id": 8,
+      "image": "product8.jpg",
+      "title": "Product 8",
+      "description": "Description for product 8",
+      "price": "$17.99"
+    },
+    {
+      "id": 9,
+      "image": "product9.jpg",
+      "title": "Product 9",
+      "description": "Description for product 9",
+      "price": "$18.99"
+    },
+    {
+      "id": 10,
+      "image": "product10.jpg",
+      "title": "Product 10",
+      "description": "Description for product 10",
+      "price": "$19.99"
+    },
+    {
+      "id": 11,
+      "image": "product11.jpg",
+      "title": "Product 11",
+      "description": "Description for product 11",
+      "price": "$20.99"
+    },
+    {
+      "id": 12,
+      "image": "product12.jpg",
+      "title": "Product 12",
+      "description": "Description for product 12",
+      "price": "$21.99"
+    }
+  ]

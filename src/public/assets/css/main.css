@@ -285,7 +285,7 @@ nav svg {
 .containerHeaderProductCategories{
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   border: 5px solid blue;
   width: 600px;
   padding: 10px;
@@ -295,17 +295,17 @@ nav svg {
 
 #formCategoriasProductos{
   display: flex;
-  align-items: center; /* Align items vertically */
-  justify-content: flex-start; /* Align items to the left */
-  margin-right: 10px;
+  align-items: center; 
 }
 
-.boxHeaderMenuCategories{
+.boxHeaderMenuCategories{ 
   margin: 20px 0;
   padding-right: 35px;
 }
 
-
+.boxHeaderMenuCategories:nth-child(2) {
+  margin-left: auto;
+}
 
 .containerProductCategories {
   display: flex;
@@ -343,6 +343,10 @@ nav svg {
 .boxPerfilVendedor{
   margin-top: 15px;
   margin-bottom: 25px;
+}
+
+.imagenPerfilVendedor{
+  width: 50px; height: auto;
 }
 
 @media only screen and (max-width: 1080) {

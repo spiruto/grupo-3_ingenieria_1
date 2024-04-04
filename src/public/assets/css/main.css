@@ -299,12 +299,24 @@ nav svg {
 }
 
 .boxHeaderMenuCategories{ 
-  margin: 20px 0;
-  padding-right: 35px;
+  margin: 10px 0;
+  padding-right: 5px;
+}
+.boxHeaderMenuCategories input{
+  margin-left: 50px !important;
 }
 
 .boxHeaderMenuCategories:nth-child(2) {
   margin-left: auto;
+}
+
+.boxHeaderMenuCategories button {
+  margin-left: 60px;
+}
+
+.buttonSearch{
+  display: flex;
+  align-items: left;
 }
 
 .containerProductCategories {

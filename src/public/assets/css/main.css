@@ -326,6 +326,25 @@ nav svg {
   text-align: center; 
 }
 
+/* Estilo Perfil Vendedor */
+
+.containerPerfilVendedor{
+  display: flex;
+  flex-direction: column; /* Cambio a dirección de columna */
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  border: 5px solid blue;
+  width: 600px;
+  height: 600px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.boxPerfilVendedor{
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
 @media only screen and (max-width: 1080) {
   body {
     background-color: lightblue;
@@ -336,7 +355,6 @@ nav svg {
     margin-bottom: 60%;
   }
 
-  /*Estilo Pagina Categorias Productos */
   
   
 }

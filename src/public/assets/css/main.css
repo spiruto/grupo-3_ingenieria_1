@@ -60,7 +60,6 @@
   padding: 10px;
   padding-top: 2px;
   padding-bottom: 0;
-  
 }
 
 #searchBar {
@@ -80,17 +79,17 @@
   color: grey;
 }
 
-#logoNav{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    height: 50px;
-    width: 50px;
-    border-radius: 30%;
-    opacity: 0.8;
-    
+#logoNav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  border-radius: 30%;
+  opacity: 0.8;
 }
+
 .button {
   position: absolute;
   right: 0px;
@@ -164,12 +163,14 @@
   padding: 14px 10px;
   text-decoration: none;
 }
+
 .Bottom {
   background: var(--color-primary);
   text-align: center;
   padding: 10px 0;
   color: var(--color-secondary);
 }
+
 .footer-content a:hover,
 .footer-content a.active {
   border-bottom: 3px solid blue;
@@ -282,7 +283,7 @@ nav svg {
   align-self: center;
 }
 
-.containerHeaderProductCategories{
+.containerHeaderProductCategories {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -290,19 +291,18 @@ nav svg {
   width: 600px;
   padding: 10px;
   margin: 0 auto;
-
 }
 
-#formCategoriasProductos{
+#formCategoriasProductos {
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
-.boxHeaderMenuCategories{ 
+.boxHeaderMenuCategories {
   margin: 10px 0;
   padding-right: 5px;
 }
-.boxHeaderMenuCategories input{
+.boxHeaderMenuCategories input {
   margin-left: 50px !important;
 }
 
@@ -314,7 +314,7 @@ nav svg {
   margin-left: 60px;
 }
 
-.buttonSearch{
+.buttonSearch {
   display: flex;
   align-items: left;
 }
@@ -322,25 +322,25 @@ nav svg {
 .containerProductCategories {
   display: flex;
   flex-wrap: wrap;
-  max-width: 900px; 
-  margin: 0 auto; 
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .boxCategories {
-  flex: 0 0 calc(33.33% - 20px); 
-  margin: 10px; 
-  border: 1px solid #ccc; 
-  padding: 10px; 
-  box-sizing: border-box; 
+  flex: 0 0 calc(33.33% - 20px);
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  text-align: center; 
+  align-items: center;
+  text-align: center;
 }
 
 /* Estilo Perfil Vendedor */
 
-.containerPerfilVendedor{
+.containerPerfilVendedor {
   display: flex;
   flex-direction: column; /* Cambio a dirección de columna */
   flex-wrap: wrap;
@@ -354,13 +354,14 @@ nav svg {
   margin-bottom: 40px;
 }
 
-.boxPerfilVendedor{
+.boxPerfilVendedor {
   margin-top: 15px;
   margin-bottom: 25px;
 }
 
-.imagenPerfilVendedor{
-  width: 50px; height: auto;
+.imagenPerfilVendedor {
+  width: 50px;
+  height: auto;
 }
 
 @media only screen and (max-width: 1080) {
@@ -372,7 +373,60 @@ nav svg {
   .formvendedor {
     margin-bottom: 60%;
   }
+}
 
-  
-  
+.ContainerLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3c91e6ff;
+  flex-direction: column;
+  margin: 30px auto;
+  padding: 30px;
+  height: 500px;
+  width: 500px;
+  border-radius: 15%;
+  box-shadow: 10px 5px 5px rgb(68, 93, 204);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+input[type="submit"] {
+  border-radius: 25px;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  background: rgb(68, 93, 204);
+  font-weight: 700;
+  font-size: 18px;
+  margin: 30px;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: #9fd356ff;
+}
+.contenedorPoliticas {
+  color: #000;
+  height: 450px;
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 3px solid #1936da;
+  border-radius: 15%;
+  padding: 50px;
+  margin: 100px;
+  box-shadow: 10px 5px 5px rgb(18, 68, 204);
+  background-color: rgb(218, 218, 218);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 18px;
+}
+.headerPoliticas {
+  color: #000;
+  text-align: center;
+  background-color: #1936da;
+  justify-content: center;
 }

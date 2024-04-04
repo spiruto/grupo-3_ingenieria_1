@@ -9,6 +9,7 @@ const validations = {
     passwordStrength: (value) => /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/.test(value) || 'La Contrasena debe incluir mayuscula, minuscula, numeros y tener almenos 8 caracteres.',
     phoneNumber: (value) => /^\+?\d{1,3}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/.test(value) || 'Telefono no valido.',
     url: (value) => /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/.test(value) || 'URL no valida.',
+    confirmPassword: (value, formData) => {return value === formData.password || 'Las contraseñas no coinciden.';}
   };
 
   export default validations

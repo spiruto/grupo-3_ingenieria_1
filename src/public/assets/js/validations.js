@@ -1,3 +1,5 @@
+// Autor => Daniel Quesada Arias
+
 const validations = {
     required: (value) => value.trim() !== '' || 'Campo Requerido.',
     email: (value) => /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(value) || 'Correo no valido.',

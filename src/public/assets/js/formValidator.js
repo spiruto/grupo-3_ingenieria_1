@@ -1,4 +1,6 @@
-  export default function validateForm(formId,validationRules) {
+// Autor => Daniel Quesada Arias
+ 
+ export default function validateForm(formId,validationRules) {
     const form = document.getElementById(formId);
     form.addEventListener('submit', function(event) {
       event.preventDefault(); 

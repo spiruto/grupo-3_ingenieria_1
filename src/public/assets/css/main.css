@@ -283,9 +283,95 @@ nav svg {
   align-self: center;
 }
 
+.containerHeaderProductCategories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 5px solid blue;
+  width: 600px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+#formCategoriasProductos {
+  display: flex;
+  align-items: center;
+}
+
+.boxHeaderMenuCategories {
+  margin: 10px 0;
+  padding-right: 5px;
+}
+.boxHeaderMenuCategories input {
+  margin-left: 50px !important;
+}
+
+.boxHeaderMenuCategories:nth-child(2) {
+  margin-left: auto;
+}
+
+.boxHeaderMenuCategories button {
+  margin-left: 60px;
+}
+
+.buttonSearch {
+  display: flex;
+  align-items: left;
+}
+
+.containerProductCategories {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.boxCategories {
+  flex: 0 0 calc(33.33% - 20px);
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Estilo Perfil Vendedor */
+
+.containerPerfilVendedor {
+  display: flex;
+  flex-direction: column; /* Cambio a dirección de columna */
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  border: 5px solid blue;
+  width: 600px;
+  height: 600px;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.boxPerfilVendedor {
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.imagenPerfilVendedor {
+  width: 50px;
+  height: auto;
+}
+
 @media only screen and (max-width: 1080) {
   body {
     background-color: lightblue;
+  }
+
+  /*Estilo Formulario Vendedor */
+  .formvendedor {
+    margin-bottom: 60%;
   }
 }
 

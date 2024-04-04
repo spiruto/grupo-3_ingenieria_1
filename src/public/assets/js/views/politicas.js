@@ -1,4 +1,4 @@
-import { getComponent } from "../../view-engine.js"
+import { getComponent } from "../view-engine.js"
 
 document.addEventListener("DOMContentLoaded", () => {
     renderLayout();

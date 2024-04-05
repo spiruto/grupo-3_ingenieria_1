@@ -3,10 +3,12 @@
   font-family: quicksand;
   src: url(../fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
 }
+
 @font-face {
   font-family: robotoslab;
   src: url(../fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf);
 }
+
 /* Variables */
 :root {
   /* Color Palette */
@@ -28,6 +30,7 @@
 *::after {
   box-sizing: border-box;
 }
+
 h1,
 h2,
 h3,
@@ -36,6 +39,7 @@ h5,
 h6 {
   font-family: quicksand;
 }
+
 body {
   width: 100dvw;
 }
@@ -123,6 +127,7 @@ body {
 .footer-content ul li {
   margin-bottom: 10px;
 }
+
 .footer-content li a {
   color: var(--color-secondary);
   text-decoration: none;
@@ -247,6 +252,7 @@ h1 {
   margin: 10px 0;
   padding-right: 5px;
 }
+
 .boxHeaderMenuCategories input {
   margin-left: 50px !important;
 }
@@ -287,7 +293,8 @@ h1 {
 
 .containerPerfilVendedor {
   display: flex;
-  flex-direction: column; /* Cambio a dirección de columna */
+  flex-direction: column;
+  /* Cambio a dirección de columna */
   flex-wrap: wrap;
   justify-content: flex-start;
   border: 5px solid blue;
@@ -352,6 +359,7 @@ input[type="submit"]:hover {
   cursor: pointer;
   background-color: #9fd356ff;
 }
+
 .contenedorPoliticas {
   color: #000;
   height: 450px;
@@ -369,6 +377,7 @@ input[type="submit"]:hover {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 18px;
 }
+
 .headerPoliticas {
   color: #000;
   text-align: center;
@@ -389,6 +398,7 @@ footer {
   left: 0;
   z-index: 999;
 }
+
 .wrapper {
   width: 100%;
 }
@@ -412,6 +422,7 @@ footer {
   height: 100%;
   background-color: var(--color-secondary);
 }
+
 .product-content {
   display: flex;
   flex-direction: column;
@@ -420,6 +431,7 @@ footer {
   height: 50%;
   gap: 2px;
 }
+
 .heart-bg {
   position: absolute;
   top: 0;
@@ -429,6 +441,7 @@ footer {
   color: black;
   z-index: 1;
 }
+
 .heart {
   position: absolute;
   top: 0;
@@ -439,6 +452,7 @@ footer {
   color: red;
   z-index: 2;
 }
+
 .product-item img {
   width: 100%;
   height: 50%;
@@ -455,6 +469,7 @@ footer {
   color: var(--color-secondary);
   width: 100%;
 }
+
 #navbar ul {
   list-style-type: none;
   text-decoration: none;
@@ -464,6 +479,7 @@ footer {
   align-items: center;
   justify-content: center;
 }
+
 li a {
   text-decoration: none;
   color: var(--color-secondary);
@@ -474,6 +490,7 @@ li a {
   padding: 5px;
   border-radius: 10px;
 }
+
 .circle {
   height: 100%;
   width: 100%;
@@ -495,10 +512,74 @@ li a {
   text-decoration: none;
   color: var(--color-secondary);
 }
+
 .productBtn:hover {
   background-color: var(--color-primary);
   color: var(--color-secondary);
 }
+
 #footerAdjuster {
   margin-top: 200px;
+}
+
+.headerDash {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 2rem;
+  margin: bottom 1rem;
+  ;
+}
+
+.sidebarDash {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 115px;
+  height: 100vh;
+  padding: 0 1.7rem;
+  color: #fff;
+  overflow: hidden;
+  transition: all 0.5s linear;
+  background: #3c91e6ff;
+}
+.sidebarDash:hover{
+width: 240px;
+}
+.menuDash {
+  height: 88%;
+  position: relative;
+  list-style: none;
+  padding: 0;
+}
+
+.menuDash li {
+  padding: 1rem;
+  margin: 50px 0;
+  border-radius: 8px;
+  transition: all 0.5 ease-in-out;
+}
+
+.menuDash li:hover {
+  background-color:rgb(6, 106, 206);
+}
+
+.menuDash a {
+color: #fff;
+font-size: 14px;
+text-decoration: none;
+display: flex;
+align-items: center;
+gap: 1.5rem;
+}
+.menuDash a span{
+  overflow: hidden;
+}
+.menuDash a i{
+font-size:1.2rem;
+
 }

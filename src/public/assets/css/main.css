@@ -225,10 +225,14 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  border: 5px solid blue;
+  border: none;
   width: 600px;
   padding: 10px;
   margin: 0 auto;
+  background-color: #3c91e6ff;
+  margin-top: 25px !important;
+  border-radius: 4px;
+  margin-bottom: 25px;
 }
 
 #formCategoriasProductos {
@@ -262,34 +266,39 @@ body {
   flex-wrap: wrap;
   max-width: 900px;
   margin: 0 auto;
+  margin-bottom: 350px;
 }
 
 .boxCategories {
   flex: 0 0 calc(33.33% - 20px);
   margin: 10px;
-  border: 1px solid #ccc;
   padding: 10px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-color: #3c91e6ff;
+  border-radius: 4px;
 }
 
 /* Estilo Perfil Vendedor */
 
 .containerPerfilVendedor {
   display: flex;
-  flex-direction: column; /* Cambio a dirección de columna */
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
-  border: 5px solid blue;
+  border: none;
+  background-color: #3c91e6ff;
+  color: white;
   width: 600px;
   height: 600px;
-  padding: 10px;
+  padding: 50px;
   margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 40px;
+  border-radius: 30px;
 }
 
 .boxPerfilVendedor {
@@ -297,19 +306,137 @@ body {
   margin-bottom: 25px;
 }
 
-.imagenPerfilVendedor {
-  width: 50px;
+.upperBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#imagenPerfilVendedor {
+  width: 90px;
   height: auto;
+  margin-right: 15px;
+}
+
+.headerDash {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 2rem;
+  margin-bottom: 1rem; /* Corrected typo from margin: bottom */
+}
+
+.wrapper {
+  display: flex; /* Usamos flexbox para organizar los elementos */
+}
+
+.sidebarDash {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 100vh;
+  padding: 0 1.7rem;
+  color: #fff;
+  overflow: hidden;
+  transition: all 0.5s linear;
+  background: #3c91e6ff;
+}
+
+.sidebarDash:hover {
+  width: 240px;
+}
+
+.menuDash {
+  height: 88%;
+  position: relative;
+  list-style: none;
+  padding: 0;
+}
+
+.menuDash li {
+  padding: 1rem;
+  margin: 50px 0;
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+}
+
+.menuDash li:hover {
+  background-color: rgb(6, 106, 206);
+}
+
+.menuDash a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.menuText {
+  display: none;
+}
+
+.menuDash li:hover .menuText {
+  display: block;
+}
+
+.menuDash a i {
+  font-size: 1.2rem;
+}
+
+.mainContent {
+  flex: 1;
+  margin-left: 20px; /* Margen izquierdo entre sidebar y mainContent */
+}
+
+/*Estilo Formulario Vendedor */
+
+.formRegistroVendedor {
+  margin: 20px auto;
+  background-color: #3c91e6ff;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+}
+
+#headerRegistroVendedor {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.formvendedor {
+  display: flex;
+  flex-direction: column;
+}
+
+.formvendedor div {
+  margin-bottom: 10px;
+}
+.formvendedor label {
+  margin-right: 10px;
+}
+
+.formvendedor small {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.8em;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 1080) {
   body {
     background-color: lightblue;
-  }
-
-  /*Estilo Formulario Vendedor */
-  .formvendedor {
-    margin-bottom: 60%;
   }
 }
 
@@ -607,7 +734,7 @@ input::-webkit-inner-spin-button {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  width:100%;
+  width: 100%;
   margin-top: 3%;
 }
 .flex-container-column {
@@ -616,9 +743,9 @@ input::-webkit-inner-spin-button {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  width:100%;
+  width: 100%;
 }
-.editBtn{
+.editBtn {
   padding: 5px;
   width: auto;
 }
@@ -689,6 +816,6 @@ input::-webkit-inner-spin-button {
   background-color: #9fcdff;
 }
 
-#new-product-container input{
+#new-product-container input {
   padding: 5px;
 }

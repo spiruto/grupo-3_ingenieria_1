@@ -33,6 +33,22 @@ const validationRules = {
     permisos:[
         validations.required
     ],
+    imagen: [
+        validations.required,
+        (value) => {
+            const allowedExtensions = ['.jpg', '.jpeg'];
+            const extension = value.substr(value.lastIndexOf('.')).toLowerCase();
+            return allowedExtensions.includes(extension) || 'Solo se permiten archivos JPG.';
+        }
+    ],
+    permisos: [
+        validations.required,
+        (value) => {
+            const allowedExtensions = ['.pdf'];
+            const extension = value.substr(value.lastIndexOf('.')).toLowerCase();
+            return allowedExtensions.includes(extension) || 'Solo se permiten archivos PDF.';
+        }
+    ],
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -49,5 +65,5 @@ async function renderLayout() {
         layout += component;
     });
     bodyEl.innerHTML = `${components.nav} ${bodyEl.innerHTML} ${components.footer}`;
-    alidateForm("formRegistroVendedor", validationRules);
+    validateForm("formRegistroVendedor", validationRules);
 }

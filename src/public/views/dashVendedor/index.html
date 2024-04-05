@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Vendedor</title>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <script src="https://kit.fontawesome.com/07863389f0.js" crossorigin="anonymous"></script>
+    <script type="module" src="/assets/js/views/dashVendedor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+</head>
+
+<body id="root">
+    <div class="sidebarDash">
+        <ul class="menuDash">
+            <li>
+                <a href="#">
+                    <i class="fa fa-list-alt" aria-hidden="true"></i>
+                    <span>Productos</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#">Lista </a></li>
+                    <li><a href="#">Pendientes de revision </a></li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-cart-arrow-down"></i>
+                    <span>Ordenes</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#">Pendientes</a></li>
+                    <li><a href="#">Lista</a></li>
+                    <li><a href="#">Reclamos</a></li>
+
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-store"></i>
+                    <span>Tienda</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#">General</a></li>
+                    <li><a href="#">Actualizar informacion</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-money-bill"></i>
+                    <span>Ventas</span>
+                </a>
+                <ul class="submenu">
+                    <li><a href="#">General</a></li>
+                    <li><a href="#">Reportes</a></li>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="main--content">
+        <div class="header-wrapper">
+            <div class="header--title">
+
+                <h2 class="titulodash">Dashboard Vendedor</h2>
+            </div>
+            <div class="card">
+                <div class="card-inner">
+                    <h3>productos</h3>
+                </div>
+                <h1>249</h1>
+            </div>
+
+            <div class="card">
+                <div class="card-inner">
+                    <h3>Ventas</h3>
+                </div>
+                <h1>249</h1>
+            </div>
+
+            <div class="card">
+                <div class="card-inner">
+                    <h3>reclamos</h3>
+                </div>
+                <h1>249</h1>
+            </div>
+
+            <div class="card">
+                <div class="card-inner">
+                    <h3>Pendientes revision</h3>
+                </div>
+                <h1>249</h1>
+            </div>
+
+        </div>
+
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+
+
+    <script>
+      
+        document.addEventListener("DOMContentLoaded", function () {
+            
+        });
+    </script>
+    </div>
+
+
+</body>
+
+
+</html>

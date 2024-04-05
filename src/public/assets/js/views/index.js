@@ -1,3 +1,5 @@
+// Autor => Daniel Quesada Arias
+
 import { getComponent } from "../view-engine.js"
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -13,5 +15,5 @@ async function renderLayout() {
     Object.values(components).forEach(component => {
         layout += component;
     });
-    bodyEl.innerHTML = `${components.nav} ${bodyEl.innerHTML} ${components.footer}`;
+    bodyEl.innerHTML = layout;
 }

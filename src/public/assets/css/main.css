@@ -583,3 +583,22 @@ gap: 1.5rem;
 font-size:1.2rem;
 
 }
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #3c91e6ff;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.menuDash li:hover .submenu {
+  display: block;
+}
+
+.submenu a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+}

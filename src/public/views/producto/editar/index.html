@@ -6,19 +6,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingenieria I y Grupo 3</title>
-    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
     <script src="https://kit.fontawesome.com/07863389f0.js" crossorigin="anonymous"></script>
-    <script type="module" src="../../../assets/js/views/producto/editar.js"></script>
+    <script type="module" src="/assets/js/views/producto/editar.js"></script>
 </head>
 
 <body id="root">
-    <form id="form">
-        <input type="text" name="tarjetaCredito" />
-        <textarea name="descripcion"></textarea>
-        <input type="number" name="precio" />
-        <input type="file" name="imagen" />
-        <button type="submit">Agregar Producto</button>
+    <form style="width: 100%;" id="form">
+        <h1 style="text-align: center;margin-top: 4%;">Edita tu Producto</h1>
+        <div id="new-product-container">
+            <div class="flex-container-column">
+                <div class="flex-container-column">
+                    <input style="padding: 5px; width: 100%;" type="text" name="nombre"
+                        placeholder="Nombre del producto..." />
+                </div>
+                <div class="flex-container-row">
+                    <input id="btn-add-variation" class="editBtn" type="button" value="Agregar Variacion" />
+                    <input id="btn-remove-selected" class="editBtn" type="button" value="Borrar Seleccionados" />
+                </div>
+                <table class="table">
+                    <thead>
+                        <th><input id="variants-check-all" type="checkbox" /></th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Imagen</th>
+                        <th>Inventario</th>
+                    </thead>
+                    <tbody id="variants">
+                        <tr>
+                            <td><input class="variant-check" type="checkbox" /></td>
+                            <td><input name="nombreVariante" type="text" placeholder="Nombre de variante" /></td>
+                            <td><input name="precio" type="number" min="1" placeholder="Precio" /></td>
+                            <td><input name="imagenVariante" type="file" /></td>
+                            <td><input name="existencia" type="number" placeholder="Existencia" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="flex-container-column">
+                <h2>Informacion del Producto</h2>
+                <textarea style="width: 70%; height: 200px;" name="descripcion"></textarea>
+                <label>Sube una imagen para tu producto</label>
+                <input style="padding: 5px; border: 1px solid #ccc;" type="file" name="imagen" />
+            </div>
+        </div>
+    <div class="flex-container-row">
+        <input class="editBtn" type="button" value="Guardar Borrador" />
+        <button class="editBtn" type="submit">Publicar Producto</button>
+    </div>
     </form>
+
 </body>
 
 </html>

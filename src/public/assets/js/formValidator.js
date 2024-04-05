@@ -7,6 +7,7 @@
       let isFormValid = true;
   
       Object.keys(validationRules).forEach(fieldName => {
+        console.log(fieldName)
         const input = form.querySelector(`[name="${fieldName}"]`);
         const value = input.value;
         const rules = validationRules[fieldName];

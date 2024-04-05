@@ -1,4 +1,4 @@
-import { getComponent } from "../view-engine.js"
+import { getComponent } from "../../view-engine.js"
 
 document.addEventListener("DOMContentLoaded", () => {
     renderLayout();
@@ -15,3 +15,4 @@ async function renderLayout() {
     });
     bodyEl.innerHTML = `${components.nav} ${bodyEl.innerHTML} ${components.footer}`;
 }
+

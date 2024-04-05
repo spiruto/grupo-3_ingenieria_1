@@ -1,6 +1,6 @@
-import { getComponent } from "../view-engine.js"
-import validations from "../validations.js"
-import validateForm from "../formValidator.js";
+import { getComponent } from "../../view-engine.js"
+import validations from "../../validations.js"
+import validateForm from "../../formValidator.js";
 
 const validationRules = {
     nombre:[

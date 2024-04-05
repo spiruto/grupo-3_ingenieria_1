@@ -1,3 +1,2 @@
-node_modules
-certificates
-Certificates
+/node_modules
+/Certificates

@@ -383,6 +383,83 @@ nav svg {
   margin-right: 15px;
 }
 
+.headerDash {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 2rem;
+  margin-bottom: 1rem; /* Corrected typo from margin: bottom */
+}
+
+.wrapper {
+  display: flex; /* Usamos flexbox para organizar los elementos */
+}
+
+.sidebarDash {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 100vh;
+  padding: 0 1.7rem;
+  color: #fff;
+  overflow: hidden;
+  transition: all 0.5s linear;
+  background: #3c91e6ff;
+}
+
+.sidebarDash:hover {
+  width: 240px;
+}
+
+.menuDash {
+  height: 88%;
+  position: relative;
+  list-style: none;
+  padding: 0;
+}
+
+.menuDash li {
+  padding: 1rem;
+  margin: 50px 0;
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+}
+
+.menuDash li:hover {
+  background-color: rgb(6, 106, 206);
+}
+
+.menuDash a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.menuText {
+  display: none;
+}
+
+.menuDash li:hover .menuText {
+  display: block;
+}
+
+.menuDash a i {
+  font-size: 1.2rem;
+}
+
+.mainContent {
+  flex: 1;
+  margin-left: 20px; /* Margen izquierdo entre sidebar y mainContent */
+}
+
   /*Estilo Formulario Vendedor */
 
   .formRegistroVendedor {

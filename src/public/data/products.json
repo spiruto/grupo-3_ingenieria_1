@@ -4,97 +4,111 @@
     "image": "broccoli.jpg",
     "title": "Brócoli Fresco",
     "description": "Nuestro brócoli fresco es un almacén de nutrientes, cultivado bajo estrictos estándares orgánicos para asegurar que recibas los vegetales más saludables y deliciosos posibles. Cada florete es seleccionado a mano por su calidad y frescura, haciéndolo perfecto para al vapor, salteado, o disfrutado crudo en ensaladas. Rico en vitaminas C y K, fibra y antioxidantes, nuestro brócoli apoya un estilo de vida saludable y añade un estallido de verde a tus comidas.",
-    "price": "$2.75"
+    "price": "$2.75",
+    "category": "Vegetales"
   },
   {
     "id": 14,
     "image": "peaches.jpg",
     "title": "Duraznos Jugosos",
     "description": "Saborea el dulce y jugoso sabor de nuestros duraznos maduros, recogidos en el punto máximo de frescura. Nuestros duraznos son el epítome del verano, con una textura aterciopelada y un sabor que baila entre la dulzura y un toque de acidez. Perfectos para tartas, postres o un refrigerio refrescante en un día cálido, nuestros duraznos son cultivados con el mayor cuidado, asegurando que cada bocado sea tan delicioso como el último. Disfruta el sabor del verano con nuestros deliciosos duraznos.",
-    "price": "$3.99"
+    "price": "$3.99",
+    "category": "Frutas"
   },
   {
     "id": 18,
     "image": "beets.jpg",
     "title": "Remolachas Frescas",
     "description": "Descubre el sabor terroso y la dulzura natural de nuestras remolachas frescas, cultivadas con prácticas sostenibles. Ricas en fibra, folato (vitamina B9), manganeso, potasio, hierro y vitamina C, nuestras remolachas son perfectas para ensaladas, jugos o como acompañamiento. Disfruta de los beneficios para la salud de estas vibrantes raíces que pueden ayudar a mejorar la circulación sanguínea y la presión arterial.",
-    "price": "$2.50"
+    "price": "$2.50",
+    "category": "Vegetales"
   },
   {
     "id": 19,
     "image": "blueberries.jpg",
     "title": "Arándanos Frescos",
     "description": "Nuestros arándanos frescos son una delicia antioxidante que no solo son deliciosos sino también increíblemente saludables. Cosechados en su punto óptimo de madurez, estos arándanos son perfectos para batidos, postres o simplemente para disfrutar solos. Ricos en antioxidantes, vitamina C y K, promueven la salud del corazón y la piel y mejoran tu bienestar general.",
-    "price": "$4.00"
+    "price": "$4.00",
+    "category": "Frutas"
   },
   {
     "id": 20,
     "image": "cabbage.jpg",
     "title": "Col Fresca",
     "description": "Nuestra col fresca es un superalimento versátil, ideal para ensaladas, guisos y fermentados como el chucrut. Cultivada con atención y sin el uso de pesticidas, esta verdura crucífera es rica en vitaminas K, C y antioxidantes. Disfruta de los beneficios saludables y el sabor crujiente de nuestra col en tu próxima comida.",
-    "price": "$1.75"
+    "price": "$1.75",
+    "category": "Vegetales"
   },
   {
     "id": 21,
     "image": "garlic.jpg",
     "title": "Ajo Fresco",
     "description": "Nuestro ajo fresco añade un sabor intenso y profundidad a cualquier plato. Conocido por sus propiedades antibacterianas y antivirales, el ajo es un básico de la cocina que no solo mejora el sabor de tus comidas sino que también ofrece beneficios para la salud. Cultivado con cuidado, nuestro ajo es potente, aromático y listo para realzar tus platos favoritos.",
-    "price": "$0.99 por cabeza"
+    "price": "$0.99 por cabeza",
+    "category": "Vegetales"
   },
   {
     "id": 22,
     "image": "ginger.jpg",
     "title": "Jengibre Fresco",
     "description": "El jengibre fresco es conocido por sus propiedades antiinflamatorias y digestivas. Nuestro jengibre, cultivado de forma sostenible, es perfecto para añadir un toque picante y aromático a tés, platos y postres. Rico en antioxidantes, ayuda a combatir el resfriado, la gripe y fomenta una digestión saludable.",
-    "price": "$3.00 por libra"
+    "price": "$3.00 por libra",
+    "category": "Vegetales"
   },
   {
     "id": 23,
     "image": "grapes.jpg",
     "title": "Uvas Frescas",
     "description": "Nuestras uvas frescas son jugosas, dulces y perfectas para comer solas, en ensaladas o para hacer vino. Cosechadas en el momento justo para asegurar su dulzura natural, estas uvas son una fuente excelente de vitaminas C y K. Disfruta del sabor refrescante y los beneficios para la salud de nuestras uvas en tu próxima merienda.",
-    "price": "$2.99 por libra"
+    "price": "$2.99 por libra",
+    "category": "Frutas"
   },
   {
     "id": 24,
     "image": "lemons.jpg",
     "title": "Limones Frescos",
     "description": "Aporta un toque de frescura a tus bebidas y platos con nuestros limones frescos. Cultivados en condiciones ideales, nuestros limones son una excelente fuente de vitamina C y antioxidantes. Su jugo y ralladura pueden transformar cualquier receta, aportando brillo y sabor.",
-    "price": "$0.50 por unidad"
+    "price": "$0.50 por unidad",
+    "category": "Frutas"
   },
   {
     "id": 25,
     "image": "mushrooms.jpg",
     "title": "Champiñones Frescos",
     "description": "Nuestros champiñones frescos son suaves, versátiles y llenos de sabor umami. Perfectos para saltear, en guisos o como parte de tus platos favoritos, los champiñones son ricos en nutrientes y una excelente fuente de vitaminas B. Añade profundidad y riqueza a tus comidas con nuestro champiñones cultivados de forma sostenible.",
-    "price": "$5.00 por libra"
+    "price": "$5.00 por libra",
+    "category": "Vegetales"
   },
   {
     "id": 26,
     "image": "olive_oil.jpg",
     "title": "Aceite de Oliva Virgen Extra",
     "description": "Nuestro aceite de oliva virgen extra es prensado en frío para conservar todos sus aromas y propiedades saludables. Rico en antioxidantes y ácidos grasos saludables, es ideal para aderezos, cocinar o simplemente para disfrutar con pan. Descubre el sabor robusto y la calidad superior de nuestro aceite de oliva.",
-    "price": "$10.99 por botella"
+    "price": "$10.99 por botella",
+    "category": "Vegetales"
   },
   {
     "id": 27,
     "image": "oranges.jpg",
     "title": "Naranjas Frescas",
     "description": "Nuestras naranjas frescas son dulces, jugosas y rebosantes de vitamina C. Perfectas para jugos, ensaladas o para disfrutar solas, estas naranjas son un refuerzo natural para tu sistema inmunológico. Cultivadas con cuidado, nuestras naranjas te ofrecen lo mejor de su sabor y beneficios saludables.",
-    "price": "$3.99 por docena"
+    "price": "$3.99 por docena",
+    "category": "Frutas"
   },
   {
     "id": 28,
     "image": "pears.jpg",
     "title": "Peras Frescas",
     "description": "Disfruta de la dulzura suave y la textura jugosa de nuestras peras frescas. Cada pera es cuidadosamente seleccionada para asegurar su calidad y sabor óptimos. Ideales para postres, ensaladas o como un snack nutritivo, nuestras peras son una delicia versátil y saludable.",
-    "price": "$2.99 por libra"
+    "price": "$2.99 por libra",
+    "category": "Frutas"
   },
   {
     "id": 29,
     "image": "watermelon.jpg",
     "title": "Sandía Fresca",
     "description": "Nuestra sandía fresca es sinónimo de verano, ofreciendo hidratación y dulzura en cada mordida. Cultivadas para tener la textura perfecta y un sabor inigualable, nuestras sandías son grandes, jugosas y perfectas para picnics, postres o simplemente como una refrescante merienda. Disfruta del sabor refrescante de nuestra sandía, una fuente natural de vitaminas A y C y antioxidantes.",
-    "price": "$5.99 por unidad"
+    "price": "$5.99 por unidad",
+    "category": "Frutas"
   }
 ]

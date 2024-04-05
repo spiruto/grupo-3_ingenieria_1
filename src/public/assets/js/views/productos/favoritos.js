@@ -28,7 +28,7 @@ async function renderLayout() {
                 <div class="product-content">
                     <h3>${p.title}</h3>
                     <p style="color:orange;"><b>${p.price}</b></p>
-                    <a href="/producto/${p.id}" class="productBtn">Ver</a>
+                    <a href="/producto?pid=${p.id}" class="productBtn">Ver</a>
                 </div>
             </div>`
     ).join("")}

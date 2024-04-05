@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderLayout();
   setTimeout(() => {
     var ctx = document.getElementById("myChart").getContext("2d");
-    var myChart = new Chart(ctx, {
+     new Chart(ctx, {
       type: "bar",
       data: {
         labels: [
@@ -50,18 +50,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 700);
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  renderLayout();
-});
 
 async function renderLayout() {
   const bodyEl = document.getElementById("root");
   const components = {};
   components["nav"] = await getComponent("nav");
   components["footer"] = await getComponent("footer");
-  let layout = "";
-  Object.values(components).forEach((component) => {
-    layout += component;
-  });
+
   bodyEl.innerHTML = `${components.nav} ${bodyEl.innerHTML} ${components.footer}`;
 }

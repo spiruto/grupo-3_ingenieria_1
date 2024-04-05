@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderLayout();
     setTimeout(() => {
         var ctx = document.getElementById('myChart').getContext('2d');
-        var myChart = new Chart(ctx, {
+         new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: ['Fresas', 'Manzanas', 'Naramjas', 'Brocoli', 'jocotes', 'Uvas'],
@@ -46,9 +46,6 @@ async function renderLayout() {
     const components = {};
     components["nav"] = await getComponent("nav");
     components["footer"] = await getComponent("footer");
-    let layout = "";
-    Object.values(components).forEach(component => {
-        layout += component;
-    });
+
    bodyEl.innerHTML = `${components.nav} ${bodyEl.innerHTML} ${components.footer}`;
 }

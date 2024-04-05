@@ -16,30 +16,30 @@
           <div class='credit-info-content'>
             <img src='https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png' height='80' class='credit-card-image' id='credit-card-image'></img>
   
-            <form class="section-input">
+            <form class="section-input" id="validacionTarjetaCredito">
               <div class="card">
                 <label for="card-number">Numero de tarjeta</label>
-                <input id="card-number" class='input-field' type="text">
+                <input id="card-number" class='input-field' type="number" name="numeroTarjeta">
               </div>
               <div class="card">
                 <label for="card-name">Nombre en tarjeta</label>
-              <input id="card-name" class='input-field' type="text">  
+              <input id="card-name" class='input-field' type="text" name="nombreTarjeta">  
               </div>
               <div class="card">
                 <label for="card-expiry">Vencimiento</label>
-                  <input id="card-expiry" class='input-field' type="text">
+                  <input id="card-expiry" class='input-field' type="date" name="vencimientoTarjeta">
               </div>
               <div class="card">
                 <label for="card-cvc">CVC</label>
-                  <input id="card-cvc" class='input-field' type="text">
+                  <input id="card-cvc" class='input-field' type="number" name="cvc">
               </div>           
             </form>
         
   
             
             <div class="container-btn">
-              <button class='btn-cancelar'>cancelar</button>
-            <button class='btn-agregar'>agregar</button>
+              <button  class='btn-cancelar'>cancelar</button>
+            <button type="submit" class='btn-agregar'>agregar</button>
             </div>
             
             </div>

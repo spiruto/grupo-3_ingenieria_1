@@ -2,82 +2,86 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro Vendedor</title>
-    <link rel="stylesheet" href="../../../assets/css/main.css" />
-    <script src="https://kit.fontawesome.com/07863389f0.js" crossorigin="anonymous"></script>
-    <script type="module" src="../../../assets/js/views/registroVendedor.js"></script> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro Vendedor</title>
+  <link rel="stylesheet" href="../../../assets/css/main.css" />
+  <script src="https://kit.fontawesome.com/07863389f0.js" crossorigin="anonymous"></script>
+  <script type="module" src="../../../assets/js/views/registroVendedor.js"></script>
 </head>
 
 <body id="root">
-    <h2>Formulario de Registro Vendedor</h2>
-        <form action="#" method="post" enctype="multipart/form-data" id="formRegistroVendedor">
-            <div class="formvendedor">
-            <br>
-            <div>
-              <label for="nombre">1.</label>
-              <input type="text" id="nombre" name="nombre" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+" required placeholder="Nombre">
-            </div>
-            <br>
-            <div>
-              <label for="apellidos">2.</label>
-              <input type="text" id="apellidos" name="apellidos" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+" required required placeholder="Apellidos">
-            </div>
-            <br>
-            <div>
-              <label for="email">3.</label>
-              <input type="email" id="email" name="email" required required placeholder="Email">
-            </div>
-            <br>
-            <div>
-              <label for="Tipo de Cedula">4.</label> 
-              <input type="radio" name="tipoCedula" value ="radio" checked required>Cedula Nacional 
-              <input type="radio" name="tipoCedula" value ="radio"  required>DIMEX
-              <input type="text"  name="numeroCedula"  maxlength="12" required placeholder="Identificacion">
-            </div>
-            <br>
-            <div>
-              <label for="direccion">5.</label>
-              <input type="text" id="direccion" name="direccion" required placeholder="Direccion">
-          </div>
-          <br>
-          <div>
-              <label for="password">6.</label>
-              <input type="password" id="password" name="password" minlength="8" required placeholder="Contraseña">
-              <small>Debe tener mínimo ocho caracteres, al menos un número, una consonante y un carácter especial.</small>
-          </div>
-          <br>
-          <div>
-              <label for="confirm_password">7.</label>
-              <input type="password" id="confirm_password" name="confirm_password" minlength="8" required placeholder="Confirmar Contraseña">
-          </div>
-            
-            <br>
-            <div>
-              <label for="comercio">9.</label>
-              <input type="text" id="comercio" name="comercio" required required placeholder="Nombre Comercio">
-            </div>
-            <br>
-            <div>
-              <label for="imagen">10.Subir Imagen (JPG):</label>
-              <input type="file" id="imagen" name="imagen" accept="image/jpeg">
-            </div>
-            <br>
-            <div>
-              <label for="permisos">11.Subir Permisos Municipales (PDF):</label>
-              <input type="file" id="permisos" name="permisos" accept="application/pdf" required>
-            </div>
-            <br>
-            <br>
-            <div>
-              <button type="submit">Enviar Solicitud</button>
-            </div>
-            <br>
-            <br>
-            
-          </form>
+  <div id="headerRegistroVendedor">
+  <h2>Formulario de Registro Vendedor</h2>
+</div>
+  <form action="#" method="post" enctype="multipart/form-data" class="formRegistroVendedor">
+    <div class="formvendedor">
+      <br>
+      <div>
+        <label for="nombre">1.</label>
+        <input type="text" id="nombre" name="nombre" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+" required placeholder="Nombre">
+      </div>
+      <br>
+      <div>
+        <label for="apellidos">2.</label>
+        <input type="text" id="apellidos" name="apellidos" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+" required required
+          placeholder="Apellidos">
+      </div>
+      <br>
+      <div>
+        <label for="email">3.</label>
+        <input type="email" id="email" name="email" required required placeholder="Email">
+      </div>
+      <br>
+      <div>
+        <label for="Tipo de Cedula">4.</label>
+        <input type="radio" name="tipoCedula" value="radio" checked required>Cedula Nacional
+        <input type="radio" name="tipoCedula" value="radio" required>DIMEX
+        <input type="text" name="numeroCedula" maxlength="12" required placeholder="Identificacion">
+      </div>
+      <br>
+      <div>
+        <label for="direccion">5.</label>
+        <input type="text" id="direccion" name="direccion" required placeholder="Direccion">
+      </div>
+      <br>
+      <div>
+        <label for="password">6.</label>
+        <input type="password" id="password" name="password" minlength="8" required placeholder="Contraseña">
+        <small>Debe tener mínimo ocho caracteres, al menos un número, una consonante y un carácter especial.</small>
+      </div>
+      <br>
+      <div>
+        <label for="confirm_password">7.</label>
+        <input type="password" id="confirm_password" name="confirm_password" minlength="8" required
+          placeholder="Confirmar Contraseña">
+      </div>
+
+      <br>
+      <div>
+        <label for="comercio">9.</label>
+        <input type="text" id="comercio" name="comercio" required required placeholder="Nombre Comercio">
+      </div>
+      <br>
+      <div>
+        <label for="imagen">10.Subir Imagen (JPG):</label>
+        <input type="file" id="imagen" name="imagen" accept="image/jpeg">
+      </div>
+      <br>
+      <div>
+        <label for="permisos">11.Subir Permisos Municipales (PDF):</label>
+        <input type="file" id="permisos" name="permisos" accept="application/pdf" required>
+      </div>
+      <br>
+      <br>
+      <div>
+        <button type="submit">Enviar Solicitud</button>
+      </div>
+    </div>
+    <br>
+    <br>
+
+  </form>
 </body>
 
 </html>
-

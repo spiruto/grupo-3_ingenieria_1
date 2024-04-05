@@ -361,6 +361,7 @@ nav svg {
   margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 40px;
+  border-radius: 10px;
   
 }
 
@@ -381,16 +382,26 @@ nav svg {
   margin-right: 15px;
 }
 
+  /*Estilo Formulario Vendedor */
+
+  .formRegistroVendedor {
+    margin-bottom: 180px;
+    margin-top: 20px;
+    background-color:  #3c91e6ff;
+    border-radius: 10px;
+  }
+  #headerRegistroVendedor{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
 @media only screen and (max-width: 1080) {
   body {
     background-color: lightblue;
   }
 
-  /*Estilo Formulario Vendedor */
-  .formvendedor {
-    margin-bottom: 60%;
-  }
-}
+
 
 .ContainerLogin {
   display: flex;

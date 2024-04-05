@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorias Productos</title>
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <script src="https://kit.fontawesome.com/07863389f0.js" crossorigin="anonymous"></script>
+    <script type="module" src="../../assets/js/views/agregar-tarjeta.js"></script> 
+</head>
+
+<body id="root">
+    <section class="agregar-tarjeta">
+        <div class='info-tarjeta'>
+          <div class='credit-info-content'>
+            <img src='https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png' height='80' class='credit-card-image' id='credit-card-image'></img>
+  
+            <form class="section-input" id="validacionTarjetaCredito">
+              <div class="card">
+                <label for="card-number">Numero de tarjeta</label>
+                <input id="card-number" class='input-field' type="number" name="numeroTarjeta">
+              </div>
+              <div class="card">
+                <label for="card-name">Nombre en tarjeta</label>
+              <input id="card-name" class='input-field' type="text" name="nombreTarjeta">  
+              </div>
+              <div class="card">
+                <label for="card-expiry">Vencimiento</label>
+                  <input id="card-expiry" class='input-field' type="date" name="vencimientoTarjeta">
+              </div>
+              <div class="card">
+                <label for="card-cvc">CVC</label>
+                  <input id="card-cvc" class='input-field' type="number" name="cvc">
+              </div>           
+            </form>
+        
+  
+            
+            <div class="container-btn">
+              <button  class='btn-cancelar'>cancelar</button>
+            <button type="submit" class='btn-agregar'>agregar</button>
+            </div>
+            
+            </div>
+            
+          </div>
+        </div>
+        
+  
+      </section>
+</body>
+
+</html>
+

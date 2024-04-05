@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ingenieria I y Grupo 3</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/07863389f0.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="../assets/js/views/dasAdmi.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body id="root">
+    <section class="section-estadisticas">
+      <div class="sidebarDash">
+        <ul class="menuDash">
+          <li>
+            <a href="#">
+              <i class="fas fa-cart-arrow-down"></i>
+              <span>Sistema</span>
+            </a>
+            <ul class="submenu">
+              <li><a href="#">General</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-store"></i>
+              <span>Usuarios</span>
+            </a>
+            <ul class="submenu">
+              <li><a href="#">Lista</a></li>
+              <li><a href="#">Bloqueados</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-money-bill"></i>
+              <span>Comentarios</span>
+            </a>
+            <ul class="submenu">
+              <li><a href="#">Pendientes</a></li>
+              <li><a href="#">Aprovados</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-money-bill"></i>
+              <span>Productos</span>
+            </a>
+            <ul class="submenu">
+              <li><a href="#">Lista</a></li>
+              <li><a href="#">Pendientes</a></li>
+              <li><a href="#">Categorías</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-money-bill"></i>
+              <span>Tiendas</span>
+            </a>
+            <ul class="submenu">
+              <li><a href="#">Lista</a></li>
+              <li><a href="#">Pendientes</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-money-bill"></i>
+              <span>Ventas</span>
+            </a>
+            <ul class="submenu">
+              <li><a href="#">General</a></li>
+              <li><a href="#">Reportes</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contenido-estadisticas-general">
+        <div class="vista-estadisticas">
+          <div class="vista-admi">
+            <h4>Usuarios</h4>
+            <p>Total 150</p>
+            <p>Bloqueados 4</p>
+          </div>
+
+          <div class="vista-admi">
+            <h4>Comentarios</h4>
+            <p>Revisión 150</p>
+            <p>Aprovados 4</p>
+          </div>
+
+          <div class="vista-admi">
+            <h4>Productos</h4>
+            <p>Total de usuarios 150</p>
+            <p>Usuarios bloqueados 4</p>
+          </div>
+
+          <div class="vista-admi">
+            <h4>Tiendas</h4>
+            <p>Total 56</p>
+            <p>Revisión 7</p>
+          </div>
+          <div class="vista-admi">
+            <h4>Ventas</h4>
+            <p>Total 3200</p>
+          </div>
+        </div>
+
+        <div class="graficosAdmi">
+          <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {});
+      </script>
+    </section>
+  </body>
+</html>

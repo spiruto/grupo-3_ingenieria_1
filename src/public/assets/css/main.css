@@ -287,7 +287,7 @@ nav svg {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  border:  none;
+  border: none;
   width: 600px;
   padding: 10px;
   margin: 0 auto;
@@ -329,12 +329,12 @@ nav svg {
   max-width: 900px;
   margin: 0 auto;
   margin-bottom: 350px;
+  
 }
 
 .boxCategories {
   flex: 0 0 calc(33.33% - 20px);
   margin: 10px;
-  border: none;
   padding: 10px;
   box-sizing: border-box;
   display: flex;
@@ -343,6 +343,7 @@ nav svg {
   text-align: center;
   background-color: #3c91e6ff;
   border-radius: 4px;
+ 
 }
 
 /* Estilo Perfil Vendedor */
@@ -361,7 +362,7 @@ nav svg {
   margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 40px;
-  border-radius: 10px;
+  border-radius: 30px;
   
 }
 
@@ -385,15 +386,41 @@ nav svg {
   /*Estilo Formulario Vendedor */
 
   .formRegistroVendedor {
-    margin-bottom: 180px;
-    margin-top: 20px;
-    background-color:  #3c91e6ff;
+    margin: 20px auto;
+    background-color: #3c91e6ff;
     border-radius: 10px;
+    width: 80%; 
+    max-width: 600px; 
+    padding: 20px; 
   }
-  #headerRegistroVendedor{
+  
+  #headerRegistroVendedor {
     margin-top: 20px;
     display: flex;
     justify-content: center;
+  }
+  
+  .formvendedor {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formvendedor div {
+    margin-bottom: 10px;
+  
+  .formvendedor label {
+    margin-right: 10px; 
+  }
+  
+  .formvendedor small {
+    display: block; 
+    margin-top: 5px; 
+    font-size: 0.8em; 
+  }
+  
+  button[type="submit"] {
+    margin-top: 20px; 
+  }
   }
 
 @media only screen and (max-width: 1080) {

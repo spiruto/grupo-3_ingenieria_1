@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Cliente</title>
+    <link rel="stylesheet" href="/assets/css/cliente.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <script src="https://kit.fontawesome.com/07863389f0.js" crossorigin="anonymous"></script>
+    <script type="module" src="/assets/js/views/registro/cliente.js"></script>
+</head>
+
+<body id="root">
+
+    <form id="formulario-registro">
+        <div id="contenidoRegistro">
+            <h2> Registrar cuenta</h2>
+            <div><input type="text" name="nombre" placeholder="Nombre"> </div>
+            <div> <input type="text" name="apellido" placeholder="Apellidas"> </div>
+            <div> <input type="text" name="correo" placeholder="Correo electronico"> </div>
+
+            <div class="checkbox">
+                <span>Nacional</span>
+                <input type="radio" name="nacional" id="">
+                <span>DIMEX</span>
+                <input type="radio" name="dimex" id="">
+                <input type="text" name="identificacion" placeholder="identificacion">
+            </div>
+
+            <div>
+                <input type="text" name="telefono" placeholder="Telefono">
+            </div>
+
+            <div>
+                <input type="text" name="direccion" placeholder="Direccion">
+            </div>
+
+
+            <div id="contraseña"> <input id="contrasena" type="password" name="contrasena" placeholder="contraseña">
+            </div>
+
+            <span class="hidden">
+                la contraseña debe tener minimo 8caracteres, al menos un numero, consonante y caracter especial
+            </span>
+
+            <div>
+                <input type="password" name="confirmar_contrasena" placeholder="Confirmar contraseña">
+            </div>
+
+            <span class="hidden">
+                confirmar contraseña
+            </span>
+
+
+            <div>
+                <button type="submit" id="botonRegistro">Registrarte</button>
+            </div>
+
+            <div id="hyperlinkRegistro">
+                <a href="url"> Ya tienes una cuenta? </a>
+            </div>
+
+
+
+        </div>
+    </form>
+
+</body>
+
+</html>

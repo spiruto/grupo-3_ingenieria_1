@@ -968,3 +968,132 @@ h4 {
   background-color: var(--color-secondary);
   color: var(--color-success);
 }
+
+/*--------------*/
+
+/*Dashboard Admi*/
+
+.section-estadisticas {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.headerDash {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 2rem;
+  margin: bottom 1rem;
+}
+
+.sidebarDash {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 115px;
+  height: 100vh;
+  padding: 0 1.7rem;
+  color: #fff;
+  overflow: hidden;
+  transition: all 0.5s linear;
+  background: #3c91e6ff;
+}
+.sidebarDash:hover {
+  width: 240px;
+}
+.menuDash {
+  height: 88%;
+  position: relative;
+  list-style: none;
+  padding: 0;
+}
+
+.menuDash li {
+  padding: 1rem;
+  margin: 50px 0;
+  border-radius: 8px;
+  transition: all 0.5 ease-in-out;
+}
+
+.menuDash li:hover {
+  background-color: rgb(6, 106, 206);
+}
+
+.menuDash a {
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.menuDash a span {
+  overflow: hidden;
+}
+.menuDash a i {
+  font-size: 1.2rem;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #3c91e6ff;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.menuDash li:hover .submenu {
+  display: block;
+}
+
+.submenu a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+}
+
+.contenido-estadisticas-general {
+  margin-top: var(--container-gap);
+  margin-bottom: var(--container-gap);
+  grid-column: 3/-2;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+}
+
+.vista-estadisticas {
+  grid-row: 1/2;
+  display: flex;
+  justify-content: space-around;
+  padding: var(--text-gap);
+}
+
+.vista-admi {
+  color: var(--color-primary);
+  border-radius: var(--border-1);
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  max-width: 200px;
+  max-height: 100px;
+}
+
+.vista-admi h4 {
+  padding-bottom: 8px;
+}
+
+.vista-admi p {
+  padding-top: 2px;
+  padding-bottom: 4px;
+}
+
+.graficosAdmi {
+  display: flex;
+  justify-content: center;
+  grid-row: 2/3;
+  width: 100%;
+  max-height: 600px;
+}

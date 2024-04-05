@@ -17,12 +17,12 @@ async function renderLayout() {
         p.title.toLowerCase().includes(productSearch && productSearch.toLowerCase().trim() || "")
         && ((category && category.toLowerCase().trim() === p.category.toLowerCase()) || !category));
     const gridEl = `
-    <div class="wrapper">
+    <div class="wrapper-2">
         <h2 style="text-align: center;margin-top:1%;">
             ${productSearch ? "Mostrando resultados para '" + productSearch + "'" : "Te mostramos productos al azar, para que encuentres de todo un poco..."}
         </h2>
         <div id="controls">
-            <select id="categories" onchange="(event=>{window.location.href='/productos?cat='+event.target.value;})(event)">
+            <select id="categories" onchange="(event=>{window.location.href='/?cat='+event.target.value;})(event)">
             <option value="">Todas las Categorias</option>
                 <optgroup label="Tierra">
                     <option value="Vegetales">Vegetales</option>

@@ -14,7 +14,7 @@ async function renderLayout() {
     components["nav"] = await getComponent("nav");
     components["footer"] = await getComponent("footer");
     const gridEl = `
-    <div class="wrapper">
+    <div class="wrapper-2">
         <h2 style="text-align: center;margin-top:1%;">
             Tus Productos Favoritos
         </h2>

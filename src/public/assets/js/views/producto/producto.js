@@ -20,7 +20,7 @@ async function renderLayout() {
     components["footer"] = await getComponent("footer");
     const product = Products.find(p => p.id === pid)
     const productoEl = `
-    <div class="wrapper">
+    <div class="wrapper-2">
         <div id="product">
             <div id="product-top">
                 <img id="product-image" src="/assets/images/product.jpg" alt="producto"/>

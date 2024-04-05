@@ -333,11 +333,10 @@ h1 {
 }
 
 .containerProductCategories {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 900px;
-  margin: 0 auto;
-  margin-bottom: 350px;
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+ width: 800px;
+ margin: auto;
 }
 
 .boxCategories {
@@ -353,7 +352,9 @@ h1 {
   background-color: #3c91e6ff;
   border-radius: 4px;
 }
-
+.boxCategories img{
+  width: 100px;
+}
 /* Estilo Perfil Vendedor */
 
 .containerPerfilVendedor {
@@ -594,7 +595,7 @@ footer {
   z-index: 999;
 }
 
-.wrapper {
+.wrapper-2 {
   width: 100%;
   color: var(--color-primary);
 }

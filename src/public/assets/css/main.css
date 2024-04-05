@@ -718,9 +718,10 @@ h4 {
 
 .contenido {
   background-color: var(--color-info);
-  grid-column: 4/-2;
+  grid-column: 4/-3;
   margin-top: 60px;
   border-radius: var(--border-1);
+  max-height: 300px;
 }
 
 .info {

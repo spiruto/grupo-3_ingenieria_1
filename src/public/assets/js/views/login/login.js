@@ -17,9 +17,8 @@ const validationRules = {
     ]
 };
 
-document.addEventListener("DOMContentLoaded", async () => {
-    await renderLayout();
-    validateForm("formRegistroVendedor", validationRules);
+document.addEventListener("DOMContentLoaded", () => {
+    renderLayout();
 });
 
 async function renderLayout() {
@@ -27,7 +26,16 @@ async function renderLayout() {
     const components = {};
     components["nav"] = await getComponent("nav");
     components["footer"] = await getComponent("footer");
+    bodyEl.innerHTML = `${components.nav} ${bodyEl.innerHTML} ${components.footer}`;
+    validateForm("formRegistroVendedor","formulario-registro", validationRules);
+ // Obtener el botón "crear cuenta"
+ const crearCuentaBtn = document.querySelector('input[value="crear cuenta"]');
     
-    let layout = Object.values(components).join(""); // Join components into a single string
-    bodyEl.innerHTML = layout + bodyEl.innerHTML; // Add components to the beginning of bodyEl's content
+ // Agregar un manejador de eventos para el clic en el botón "crear cuenta"
+ crearCuentaBtn.addEventListener("click", (event) => {
+     event.stopPropagation();
+     
+     // Redirigir a una nueva página
+     window.location.href = "/registro/mainRegistro/";
+ });
 }

@@ -203,8 +203,9 @@
     height: auto;
     width: 30%;
     border-radius: 5%;
-    border: var(--color-message) solid 3px  ;
+    border: none;
    text-align: center;
+   margin-top: 100px;
   
 
   }

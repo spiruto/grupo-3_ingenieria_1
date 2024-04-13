@@ -11,31 +11,27 @@
 </head>
 
 <body id="root">
-
-    <form id="form">
-        <div id="email">
-            <label for="email">Correo electronico:</label>
-            <input type="email" id="email" size="30" required placeholder="Correo electronico" />
-        </div>
-        <div id="[password]">
-            <label for="pass">contraseña :</label>
-            <input type="password" id="pass" name="password" minlength="8" placeholder="contraseña" />
-        </div>
-        <form action="#">
+    <div id="loginContainer">
+        <form id="formLogin">
+            <h3 id="titleLogin">Login</h3>
+            <div id="email">
+                <label for="email">Email:</label>
+                <input type="email" id="email" size="20" required placeholder="Correo electronico" />
+            </div>
+            <div id="password">
+                <label for="pass">Contraseña :</label>
+                <input type="password" id="pass" size="20" name="password" minlength="8" placeholder="contraseña" />
+            </div>
             <input type="submit" value="iniciar sesion" />
-        </form>
-        <div>
-            <p>
-                ¿Olvidaste tu contraseña?
-                <a href="forgot_password.html">Haz clic aquí</a> para restablecerla.
-            </p>
-            <form action="#">
+            <div>
+                <p>
+                    ¿Olvidaste tu contraseña?
+                    <a href="forgot_password.html">Haz clic aquí</a> para restablecerla.
+                </p>
                 <input type="submit" value="crear cuenta" />
-            </form>
-        </div>
-    </form>
-    </form>
+            </div>
+        </form>
+    </div>   
+    
 </body>
-
-
 </html>

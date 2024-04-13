@@ -523,32 +523,59 @@ button[type="submit"] {
   }
 }
 
-.ContainerLogin {
+#loginContainer {
+  margin-top: 100px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #3c91e6ff;
   flex-direction: column;
-  margin: 30px auto;
-  padding: 30px;
-  height: 500px;
-  width: 500px;
-  border-radius: 15%;
-  box-shadow: 10px 5px 5px rgb(68, 93, 204);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  align-items: center;
+  border: 1px grey solid;
+  border-radius: 25px;
+  padding: 80px 20px; 
+  background-color: #3c91e6ff;
+  max-width: 400px;
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+#formLogin {
+  width: 100%;
+  text-align: center;
+}
+
+#email,
+#password {
+  width: 100%; 
+}
+
+#email label,
+#password label {
+  display: inline-block;
+  width: 30%; 
+}
+
+#email input,
+#password input {
+  width: 70%;
+  margin: 10px;
+}
+
+
+#titleLogin{
+  margin-bottom: 30px;
 }
 
 input[type="submit"] {
   border-radius: 25px;
   color: #fff;
-  width: 100%;
+  width: 200px;
   height: 50px;
   border: 1px solid;
   background: rgb(68, 93, 204);
   font-weight: 700;
   font-size: 18px;
-  margin: 30px;
+  margin: 30px 0;
+  margin-left: 60x;
+  max-width: 200px;
 }
 
 input[type="submit"]:hover {
@@ -1164,9 +1191,10 @@ h4 {
   grid-template-columns: repeat(12, 1fr);
 }
 #footerAdjuster {
-  margin-top: 300px;
+  margin-top: 200px;
   opacity: 0;
 }
+
 .productStar {
   width: 30px;
   color: rgb(234, 224, 37);
@@ -1522,4 +1550,48 @@ input::-webkit-inner-spin-button {
 .card h1 {
   font-size: 24px;
   color: #333;
+}
+
+#containerOpcionRegistro{
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  height: 200px;
+}
+
+.columnaRegistroUsuario{
+  border: none;
+  padding: 20px; 
+  margin: 10px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  font-weight: bold;
+  background-color:  #3c91e6ff;
+  color: white;
+}
+
+.columnaRegistroUsuario button {
+  margin-top: auto;
+}
+
+button[type="buttonTipoCuenta"] {
+  border-radius: 25px;
+  color: #fff;
+  width: 120px;
+  height: 50px;
+  border: 1px solid;
+  background: rgb(68, 93, 204);
+  font-weight: 700;
+  font-size: 15px;
+  margin: 30px 0;
+  margin-left: 60x;
+  max-width: 200px;
+}
+
+button[type="buttonTipoCuenta"]:hover {
+  cursor: pointer;
+  background-color: #9fd356ff;
 }

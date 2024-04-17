@@ -31,7 +31,7 @@
             const label = document.createElement('label');
             label.id = `error-${fieldName}`;
             label.textContent = errorMessage;
-            label.style.color = 'red';
+            label.style.color = 'yellow';
             input.parentNode.insertBefore(label, input.nextSibling);
           }
         } else if (errorLabel) {

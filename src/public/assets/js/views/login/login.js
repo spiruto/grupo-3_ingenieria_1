@@ -13,6 +13,17 @@ async function renderLayout() {
     components["footer"] = await getComponent("footer");
     bodyEl.innerHTML = `${components.nav} ${bodyEl.innerHTML} ${components.footer}`;
 
+ // Obtener el botón "crear cuenta"
+ const crearCuentaBtn = document.querySelector('input[value="crear cuenta"]');
+    
+ // Agregar un manejador de eventos para el clic en el botón "crear cuenta"
+ crearCuentaBtn.addEventListener("click", (event) => {
+     event.stopPropagation();
+     
+     // Redirigir a una nueva página
+     window.location.href = "/registro/mainRegistro/";
+ });
+
     // Obtener el botón "crear cuenta"
     const crearCuentaBtn = document.querySelector('input[value="crear cuenta"]');
 
@@ -23,4 +34,5 @@ async function renderLayout() {
         // Redirigir a una nueva página
         window.location.href = "/registro/mainRegistro/";
     });
+
 }

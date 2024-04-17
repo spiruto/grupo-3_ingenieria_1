@@ -340,10 +340,10 @@ h1 {
 }
 
 .containerProductCategories {
- display: grid;
- grid-template-columns: repeat(3,1fr);
- width: 800px;
- margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 800px;
+  margin: auto;
 }
 
 .boxCategories {
@@ -359,9 +359,11 @@ h1 {
   background-color: #3c91e6ff;
   border-radius: 15px;
 }
-.boxCategories img{
+
+.boxCategories img {
   width: 200px;
 }
+
 /* Estilo Perfil Vendedor */
 
 .containerPerfilVendedor {
@@ -391,6 +393,7 @@ h1 {
   width: 50px;
   height: auto;
 }
+
 .upperBox {
   display: flex;
   justify-content: flex-start;
@@ -411,11 +414,13 @@ h1 {
   background: #fff;
   border-radius: 10px;
   padding: 10px 2rem;
-  margin-bottom: 1rem; /* Corrected typo from margin: bottom */
+  margin-bottom: 1rem;
+  /* Corrected typo from margin: bottom */
 }
 
 .wrapper {
-  display: flex; /* Usamos flexbox para organizar los elementos */
+  display: flex;
+  /* Usamos flexbox para organizar los elementos */
 }
 
 .sidebarDash {
@@ -477,18 +482,21 @@ h1 {
 
 .mainContent {
   flex: 1;
-  margin-left: 20px; /* Margen izquierdo entre sidebar y mainContent */
+  margin-left: 20px;
+  /* Margen izquierdo entre sidebar y mainContent */
 }
 
 /*Estilo Formulario Vendedor */
 
 .formRegistroVendedor {
+
   margin: 20px auto;
   background-color: #3c91e6ff;
   border-radius: 10px;
   width: 80%;
   max-width: 600px;
   padding: 20px;
+
 }
 
 #headerRegistroVendedor {
@@ -500,11 +508,14 @@ h1 {
 .formvendedor {
   display: flex;
   flex-direction: column;
+  margin-bottom: 40px;
+
 }
 
 .formvendedor div {
   margin-bottom: 10px;
 }
+
 .formvendedor label {
   margin-right: 10px;
 }
@@ -519,10 +530,11 @@ button[type="submit"] {
   margin-top: 20px;
 }
 
-@media only screen and (max-width: 1080) {
+@media only screen and (max-width: 1080px) {
   body {
     background-color: lightblue;
   }
+
 
   /*Estilo Formulario Vendedor */
   .formvendedor {
@@ -537,11 +549,11 @@ button[type="submit"] {
   align-items: center;
   border: 1px grey solid;
   border-radius: 25px;
-  padding: 80px 20px; 
+  padding: 80px 20px;
   background-color: #3c91e6ff;
   max-width: 400px;
-  margin-left: auto; 
-  margin-right: auto; 
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #formLogin {
@@ -551,13 +563,13 @@ button[type="submit"] {
 
 #email,
 #password {
-  width: 100%; 
+  width: 100%;
 }
 
 #email label,
 #password label {
   display: inline-block;
-  width: 30%; 
+  width: 30%;
 }
 
 #email input,
@@ -567,7 +579,7 @@ button[type="submit"] {
 }
 
 
-#titleLogin{
+#titleLogin {
   margin-bottom: 30px;
 }
 
@@ -628,6 +640,7 @@ footer {
   bottom: 0;
   left: 0;
   z-index: 999;
+
 }
 
 .wrapper-2 {
@@ -762,6 +775,7 @@ li a {
   margin-top: 40px;
   margin-bottom: 40px;
 }
+
 .carrito-productos h1 {
   color: var(--color-info);
 }
@@ -1159,6 +1173,7 @@ h4 {
 .producto-relacionado h3 {
   padding-bottom: var(--text-gap-1);
 }
+
 .producto-relacionado h4 {
   padding-top: var(--text-gap-1);
   padding-bottom: var(--text-gap);
@@ -1198,6 +1213,7 @@ h4 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
+
 #footerAdjuster {
   margin-top: 200px;
   opacity: 0;
@@ -1207,6 +1223,7 @@ h4 {
   width: 30px;
   color: rgb(234, 224, 37);
 }
+
 #product {
   width: 80%;
   display: flex;
@@ -1216,6 +1233,7 @@ h4 {
   margin: auto;
   margin-top: 5%;
 }
+
 #product-title {
   display: flex;
   flex-direction: row;
@@ -1223,11 +1241,13 @@ h4 {
   justify-content: start;
   gap: 20px;
 }
+
 #product-details {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 #product-top {
   display: flex;
   flex-direction: row;
@@ -1238,11 +1258,13 @@ h4 {
   gap: 2%;
   margin-top: 2%;
 }
+
 #product-bottom {
   padding-top: 0%;
   border-top: 1px solid black;
   width: 100%;
 }
+
 #product-options {
   list-style-type: none;
   display: flex;
@@ -1253,29 +1275,35 @@ h4 {
   gap: 10px;
   height: 10%;
 }
+
 #product-image {
   width: 30%;
   border-radius: 20px;
 }
+
 .option-img {
   width: 100%;
   cursor: pointer;
   height: 100%;
 }
+
 #product-options li {
   border: 1px solid black;
   border-radius: 10px;
   overflow: hidden;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 #add-product-btn {
   height: 30px;
   width: 30%;
 }
+
 #controls {
   display: flex;
   flex-direction: row;
@@ -1288,6 +1316,7 @@ input::-webkit-inner-spin-button {
   background-color: rgb(211, 211, 211);
   gap: 5px;
 }
+
 #cart a {
   display: flex;
   align-items: center;
@@ -1316,6 +1345,7 @@ input::-webkit-inner-spin-button {
   width: 100%;
   margin-top: 3%;
 }
+
 .flex-container-column {
   display: flex;
   flex-direction: column;
@@ -1324,6 +1354,7 @@ input::-webkit-inner-spin-button {
   gap: 10px;
   width: 100%;
 }
+
 .editBtn {
   padding: 5px;
   width: auto;
@@ -1348,7 +1379,7 @@ input::-webkit-inner-spin-button {
   border-bottom: 2px solid #dee2e6;
 }
 
-.table tbody + tbody {
+.table tbody+tbody {
   border-top: 2px solid #dee2e6;
 }
 
@@ -1381,8 +1412,8 @@ input::-webkit-inner-spin-button {
 }
 
 .table-primary,
-.table-primary > th,
-.table-primary > td {
+.table-primary>th,
+.table-primary>td {
   background-color: #b8daff;
 }
 
@@ -1390,8 +1421,8 @@ input::-webkit-inner-spin-button {
   background-color: #9fcdff;
 }
 
-.table-hover .table-primary:hover > td,
-.table-hover .table-primary:hover > th {
+.table-hover .table-primary:hover>td,
+.table-hover .table-primary:hover>th {
   background-color: #9fcdff;
 }
 
@@ -1423,9 +1454,11 @@ input::-webkit-inner-spin-button {
   transition: all 0.5s linear;
   background: #3c91e6ff;
 }
+
 .sidebarDash:hover {
   width: 240px;
 }
+
 .menuDash {
   height: 88%;
   position: relative;
@@ -1452,12 +1485,15 @@ input::-webkit-inner-spin-button {
   align-items: center;
   gap: 1.5rem;
 }
+
 .menuDash a span {
   overflow: hidden;
 }
+
 .menuDash a i {
   font-size: 1.2rem;
 }
+
 .submenu {
   display: none;
   position: absolute;
@@ -1518,32 +1554,39 @@ input::-webkit-inner-spin-button {
   width: 100%;
   max-height: 600px;
 }
+
 .main--content {
   position: absolute;
   top: 80px;
   left: 300px;
 }
+
 .main-title {
   position: absolute;
   top: 120px;
   left: 300px;
 }
+
 .card {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-bottom: 20px;
-  width: 150px; /* Adjust as needed */
-  margin-right: 20px; /* Adjust as needed */
+  width: 150px;
+  /* Adjust as needed */
+  margin-right: 20px;
+  /* Adjust as needed */
   display: flex;
-  flex-direction: row; /* Display cards in a row */
+  flex-direction: row;
+  /* Display cards in a row */
   display: inline-block;
   justify-content: space-evenly;
 }
 
 .card:last-child {
-  margin-right: 0; /* Remove margin for the last card */
+  margin-right: 0;
+  /* Remove margin for the last card */
 }
 
 .card-inner {
@@ -1560,24 +1603,24 @@ input::-webkit-inner-spin-button {
   color: #333;
 }
 
-#containerOpcionRegistro{
+#containerOpcionRegistro {
   display: flex;
   justify-content: center;
   margin-top: 150px;
   height: 200px;
 }
 
-.columnaRegistroUsuario{
+.columnaRegistroUsuario {
   border: none;
-  padding: 20px; 
-  margin: 10px; 
+  padding: 20px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 20px;
   font-weight: bold;
-  background-color:  #3c91e6ff;
+  background-color: #3c91e6ff;
   color: white;
 }
 

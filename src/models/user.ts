@@ -8,7 +8,11 @@ const userSchema = new Schema({
     nationalId: { type: String, required: true, unique: true },
     nationalIdType: { type: String, required: true },
     phone: { type: String, required: true },
-    password: { type: String, required: true }
+    password: { type: String, required: true },
+    profileImage: { type: Buffer },
+    paymentMethod: { type: String},
+    userType: { type: String, default: "Cliente"},
+    permitPDF: { type: Buffer },
 });
 
 module.exports = mongoose.model('User', userSchema);

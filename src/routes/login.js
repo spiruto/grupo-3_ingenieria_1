@@ -20,7 +20,6 @@ router.post('/', async (req, res) => {
         if (!isMatch) {
             return res.status(400).json({ message: "Invalid email or password 2" });
         }
-
         // Return user data (you may want to exclude sensitive information like password here)
         res.json(user);
     } catch (error) {

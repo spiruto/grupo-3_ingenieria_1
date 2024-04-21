@@ -14,7 +14,7 @@ async function renderLayout() {
     bodyEl.innerHTML = `${components.nav} ${bodyEl.innerHTML} ${components.footer}`;
 
  // Obtener el botón "crear cuenta"
- const crearCuentaBtn = document.querySelector('input[value="crear cuenta"]');
+ /*const crearCuentaBtn = document.querySelector('input[value="crear cuenta"]');
     
  // Agregar un manejador de eventos para el clic en el botón "crear cuenta"
  crearCuentaBtn.addEventListener("click", (event) => {
@@ -34,38 +34,56 @@ async function renderLayout() {
         // Redirigir a una nueva página
         window.location.href = "/registro/mainRegistro/";
     });
+*/
 
+async function postData(url = '', data = {}) {
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+        
+        if (!response.ok) {
+            throw new Error('Network response was not ok.');
+        }
+        
+        return response.json();
+    } catch (error) {
+        console.error('Error:', error);
+        throw new Error('Failed to fetch');
+    }
 }
 
-function handleClick() {
-    async function postData(url = '', data = {}) {
-        // Default options are marked with *
-        const response = await fetch(url, {
-          method: 'POST', // *GET, POST, PUT, DELETE, etc.
-          headers: {
-            'Content-Type': 'application/json'
-            // 'Content-Type': 'application/x-www-form-urlencoded',
-          },
-          body: JSON.stringify(data) // body data type must match "Content-Type" header
-        });
-        return response.json(); // parses JSON response into native JavaScript objects
-      }
-      let email = document.getElementById("emailInput");
-      let password = document.getElementById("passwordInput");
-      
-      // Example usage:
-      const apiUrl = 'https://tienda.com/api/login';
-      const postDataExample = {"email": email, "password": password};
-      
-      postData(apiUrl, postDataExample)
-        .then(data => {
-            console.log(data);
-        })
-        .catch(error => {
-            alert("NO login");
-        });
-
+// Handle click event
+async function handleClick() {
+    try {
+        const email = document.getElementById("emailInput").value;
+        const password = document.getElementById("passwordInput").value;
+        
+        const apiUrl = 'https://localhost/api/login';
+        const postDataExample = {"email": email, "password": password};
+        
+        const response = await postData(apiUrl, postDataExample);
+        
+        console.log("response.status =", response.status);
+        console.log("response.body =", response.body);
+        
+        if (response.status !== 200) {
+            alert("Invalid User or password");
+            return;
+        }
+        
+        localStorage.setItem("user", JSON.stringify(response.body));
+        console.log(localStorage.getItem("user"));
+    } catch (error) {
+        alert("No login");
+    }
 }
 
 const button = document.getElementById("myButton");
 button.addEventListener("click", handleClick);
+
+}

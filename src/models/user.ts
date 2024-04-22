@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+let mongoose = require('mongoose');
+let Schema = mongoose.Schema;
 
 const userSchema = new Schema({
     name: { type: String, required: true },
@@ -12,7 +12,7 @@ const userSchema = new Schema({
     profileImage: { type: Buffer },
     paymentMethod: { type: String},
     userType: { type: String, default: "Cliente"},
-    permitPDF: { type: Buffer },
+    permitPDF: { type: Buffer }
 });
 
 module.exports = mongoose.model('User', userSchema);

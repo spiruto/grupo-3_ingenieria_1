@@ -48,7 +48,7 @@ app.use('/api/login', require('./routes/login'));
 app.use('/api/user', require('./routes/user'));
 app.use('/api/stores', require('./routes/storesRoute'));
 app.use('/api/inventory', require('./routes/inventoryRoute'));
-app.use('/api/product', require('./routes/productRoutes'));
+app.use('/api/product', require('./routes/productRoute'));
 app.use('/api/paymentMethod', require('./routes/paymentMethod'));
 app.listen(port, () => console.log(`Server running on port ${port}`));
 

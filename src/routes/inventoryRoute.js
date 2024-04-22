@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Inventory = require('../models/inventory');
+const Inventory = require('../models/inventory.ts');
 
 // GET: Obtener todos los registros de inventario
 router.get('/', async (req, res) => {
@@ -43,6 +43,18 @@ router.delete('/:id', async (req, res) => {
     try {
         const deletedItem = await Inventory.findByIdAndDelete(req.params.id);
         res.json({ message: 'Inventory item deleted successfully' });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Internal Server Error' });
+    }
+});
+
+router.get('/store/:idstore', async (req, res) => {
+    try {
+        let idstore = req.params.idstore;
+        const findInventories = await Inventory.find({ store: idstore}).populate("product").exec();
+        res.json(findInventories);
+
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Internal Server Error' });

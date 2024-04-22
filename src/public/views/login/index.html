@@ -7,30 +7,30 @@
     <title>Login</title>
     <link rel="stylesheet" href="/assets/css/main.css" />
     <script src="https://kit.fontawesome.com/07863389f0.js" crossorigin="anonymous"></script>
-    <script type="module" src="/assets/js/views/login/login.js"></script>
+    <script type="module" src="../../assets/js/views/login/login.js"></script>
 </head>
 
 <body id="root">
     <div id="loginContainer">
-        <form id="formLogin">
+        <div id="formLogin">
             <h3 id="titleLogin">Login</h3>
             <div id="email">
                 <label for="email">Email:</label>
-                <input type="email" id="email" size="20" required placeholder="Correo electronico" />
+                <input type="email" id="emailInput" size="20" required placeholder="Correo electronico" />
             </div>
             <div id="password">
                 <label for="pass">Contraseña :</label>
-                <input type="password" id="pass" size="20" name="password" minlength="8" placeholder="contraseña" />
+                <input type="password" id="passwordInput" size="20" name="password" minlength="8" placeholder="contraseña" />
             </div>
-            <input type="submit" value="iniciar sesion" />
+            <button  id="myButton" > iniciar sesion  </button>
             <div>
                 <p>
                     ¿Olvidaste tu contraseña?
                     <a href="forgot_password.html">Haz clic aquí</a> para restablecerla.
                 </p>
-                <input type="submit" value="crear cuenta" />
+                <button>Crear cuenta</button>
             </div>
-        </form>
+        </div>
     </div>   
     
 </body>

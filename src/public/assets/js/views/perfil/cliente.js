@@ -15,3 +15,4 @@ async function renderLayout() {
   });
   bodyEl.innerHTML = `${components.nav} ${bodyEl.innerHTML} ${components.footer}`;
 }
+

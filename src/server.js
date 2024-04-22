@@ -3,6 +3,13 @@ const fs = require('fs');
 const http = require('http');
 const https = require('https');
 const path = require('path');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const router = express.Router();
+
+const port = 3000;
+
+//const User = require('./models/user'); // Assuming your user model file is named userModel.js
 
 const app = express();
 
@@ -24,3 +31,25 @@ httpApp.get('*', (req, res) => {
 const httpServer = http.createServer(httpApp);
 const HTTP_PORT = 80;
 httpServer.listen(HTTP_PORT);
+
+mongoose.connect('mongodb://localhost:27017/Proyecto1', { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('MongoDB connected'))
+    .catch(err => console.log(err));
+
+
+    // configure the app to use bodyParser()
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.json());
+
+// Define routes
+app.use('/api/login', require('./routes/login'));
+app.use('/api/user', require('./routes/user'));
+app.use('/api/stores', require('./routes/storesRoute'));
+app.use('/api/inventory', require('./routes/inventoryRoute'));
+app.use('/api/product', require('./routes/productRoute'));
+app.use('/api/paymentMethod', require('./routes/paymentMethod'));
+app.listen(port, () => console.log(`Server running on port ${port}`));
+
+module.exports = router;

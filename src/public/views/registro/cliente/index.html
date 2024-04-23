@@ -13,59 +13,44 @@
 
 <body id="root">
 
-    <form id="formulario-registro">
+    <div id="formulario-registro">
         <div id="contenidoRegistro">
-            <h2> Registrar cuenta</h2>
-            <div><input type="text" name="nombre" placeholder="Nombre"> </div>
-            <div> <input type="text" name="apellido" placeholder="Apellidas"> </div>
-            <div> <input type="text" name="correo" placeholder="Correo electronico"> </div>
-
+            <h2>Registrar cuenta</h2>
+            <div><input type="text" id="nombre" name="name" placeholder="Nombre"> </div>
+            <div><input type="text" id="apellidos" name="lastName" placeholder="Apellidos"> </div>
+            <div><input type="text" id="email" name="email" placeholder="Correo electrónico"> </div>
+    
             <div class="checkbox">
                 <span>Nacional</span>
-                <input type="radio" name="identificacion" value="nacional">
-                <span>DIMEX</span>
-                <input type="radio" name="identificacion" value="dimex">
-                <input type="text" name="identificacion_value" placeholder="identificacion">
+                <input type="radio" id="cedulaNacional" name="nationalIdType" value="Cedula Nacional" checked>
+                <label for="cedulaNacional">Cedula Nacional</label>
+                <input type="radio" id="dimex" name="nationalIdType" value="DIMEX">
+                <label for="dimex">DIMEX</label>
+                <input type="text" id="numeroCedula" name="nationalId" maxlength="12" placeholder="Identificación">
             </div>
-            
+    
+            <div><input type="text" id="telefono" name="phone" placeholder="Teléfono"></div>
+    
+            <div><input type="text" id="address" name="direccion" placeholder="Dirección"></div>
+    
             <div>
-                <input type="text" name="telefono" placeholder="Telefono">
+                <label for="password">6.</label>
+                <input type="password" id="password" name="password" minlength="8" placeholder="Contraseña">
+                <small>Debe tener mínimo ocho caracteres, al menos un número, una consonante y un carácter especial.</small>
             </div>
-
-            <div>
-                <input type="text" name="direccion" placeholder="Direccion">
-            </div>
-
-
-            <div id="contraseña"> <input id="contrasena" type="password" name="contrasena" placeholder="contraseña">
-            </div>
-
-            <span class="hidden">
-                la contraseña debe tener minimo 8caracteres, al menos un numero, consonante y caracter especial
-            </span>
-
-            <div>
-                <input type="password" name="confirmar_contrasena" placeholder="Confirmar contraseña">
-            </div>
-
-            <span class="hidden">
-                confirmar contraseña
-            </span>
-
-
-            <div>
-                <button type="submit" id="botonRegistro">Registrarte</button>
-            </div>
-
+            <span class="hidden">La contraseña debe tener mínimo ocho caracteres, al menos un número, consonante y carácter especial</span>
+    
+            <div><input type="password" id="confirm_password" name="confirm_password" minlength="8" placeholder="Confirmar contraseña"></div>
+            <span class="hidden">Confirmar contraseña</span>
+    
+            <button id="botonRegistro">Registrarte</button>
+    
             <div id="hyperlinkRegistro">
-                <a href="url"> Ya tienes una cuenta? </a>
+                <a href="url">¿Ya tienes una cuenta?</a>
             </div>
-
-
-
         </div>
-    </form>
-
+    </div>
+    
 </body>
 
 </html>

@@ -63,20 +63,19 @@ async function handleClick() {
         const email = document.getElementById("emailInput").value;
         const password = document.getElementById("passwordInput").value;
         
-        const apiUrl = 'https://localhost/api/login';
+        const apiUrl = 'https://tienda.com/api/login';
         const postDataExample = {"email": email, "password": password};
         
         const response = await postData(apiUrl, postDataExample);
         
-        console.log("response.status =", response.status);
-        console.log("response.body =", response.body);
+        console.log("response =", response);
         
-        if (response.status !== 200) {
+        if (response.message === "Invalid email or password") {
             alert("Invalid User or password");
             return;
         }
         
-        localStorage.setItem("user", JSON.stringify(response.body));
+        localStorage.setItem("user", JSON.stringify(response));
         console.log(localStorage.getItem("user"));
     } catch (error) {
         alert("No login");
@@ -85,5 +84,4 @@ async function handleClick() {
 
 const button = document.getElementById("myButton");
 button.addEventListener("click", handleClick);
-
 }

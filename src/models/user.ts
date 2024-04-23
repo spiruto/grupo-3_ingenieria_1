@@ -12,7 +12,8 @@ const userSchema = new Schema({
     profileImage: { type: Buffer },
     paymentMethod: { type: String},
     userType: { type: String, default: "Cliente"},
-    permitPDF: { type: Buffer }
+    permitPDF: { type: Buffer },
+    address: { type: String },
 });
 
 module.exports = mongoose.model('User', userSchema);

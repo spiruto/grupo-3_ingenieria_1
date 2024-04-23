@@ -66,8 +66,8 @@ async function setupFormSubmission() {
         "nationalIdType":documentType,
         "password": document.getElementById("password").value,
         /*profileImage:document.getElementById("imagen"),*/
-        "userType":"Vendedor"
-        /*permitPDF:document.getElementById("nombre")*/
+        "userType": Vendedor
+        /*** permitPDF:document.getElementById("nombre")*/
     }
     await sendDataToMongoDB(data);
 }

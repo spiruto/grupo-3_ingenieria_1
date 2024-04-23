@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Sale = require('../models/sale');
+const Sale = require('../models/sale.ts');
 
 // GET: Obtener todas las ventas
 router.get('/', async (req, res) => {

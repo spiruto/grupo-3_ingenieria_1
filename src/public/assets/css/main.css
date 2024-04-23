@@ -151,7 +151,7 @@ body {
 }
 
 .containerFooter {
-  margin-top: 20px !important;
+
   background-color: var(--color-info);
   width: 100%;
   display: flex;

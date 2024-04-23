@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
-const User = require('../models/user.ts'); // Assuming your user model file is named User.js
+const User = require('../models/user.ts'); 
 
 // Login endpoint
 router.post('/', async (req, res) => {

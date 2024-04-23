@@ -15,17 +15,17 @@
   <div id="headerRegistroVendedor">
     <h2>Formulario de Registro Vendedor</h2>
   </div>
-  <form action="#" method="post" enctype="multipart/form-data" id="formRegistroVendedor" class="formRegistroVendedor">
+  <div action="/registro-vendedor" method="post" enctype="multipart/form-data" id="formRegistroVendedor" class="formRegistroVendedor">
     <div class="formvendedor">
       <br>
       <div>
         <label for="nombre">1.</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+        <input type="text" id="nombre" name="name" placeholder="Nombre">
       </div>
       <br>
       <div>
         <label for="apellidos">2.</label>
-        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos">
+        <input type="text" id="apellidos" name="lastName" placeholder="Apellidos">
       </div>
       <br>
       <div>
@@ -34,15 +34,17 @@
       </div>
       <br>
       <div>
-        <label for="Tipo de Cedula">4.</label>
-        <input type="radio" name="tipoCedula" value="radio" checked>Cedula Nacional
-        <input type="radio" name="tipoCedula" value="radio">DIMEX
-        <input type="text" name="numeroCedula" maxlength="12" placeholder="Identificacion">
+        <label for="tipoCedula">4.</label>
+        <input type="radio" id="cedulaNacional" name="nationalIdType" value="Cedula Nacional" checked>
+        <label for="cedulaNacional">Cedula Nacional</label>
+        <input type="radio" id="dimex" name="nationalIdType" value="DIMEX">
+        <label for="dimex">DIMEX</label>
+        <input type="text" id="numeroCedula" name="nationalId" maxlength="12" placeholder="Identificacion">
       </div>
       <br>
       <div>
         <label for="direccion">5.</label>
-        <input type="text" id="direccion" name="direccion" placeholder="Direccion">
+        <input type="text" id="direccion" name="phone" placeholder="Direccion">
       </div>
       <br>
       <div>
@@ -53,38 +55,33 @@
       <br>
       <div>
         <label for="confirm_password">7.</label>
-        <input type="password" id="confirm_password" name="confirm_password" minlength="8"
-          placeholder="Confirmar Contraseña">
+        <input type="password" id="confirm_password" name="confirm_password" minlength="8" placeholder="Confirmar Contraseña">
       </div>
 
       <br>
       <div>
-        <label for="comercio">9.</label>
-        <input type="text" id="comercio" name="comercio" placeholder="Nombre Comercio">
+        <label for="comercio">8.</label>
+        <input type="text" id="comercio" name="paymentMethod" placeholder="Nombre Comercio">
       </div>
       <br>
       <div>
-        <label for="imagen">10.Subir Imagen (JPG):</label>
-        <input type="file" id="imagen" name="imagen" accept="image/jpeg">
+        <label for="imagen">9. Subir Imagen (JPG):</label>
+        <input type="file" id="imagen" name="profileImage" accept="image/jpeg">
       </div>
       <br>
       <div>
-        <label for="permisos">11.Subir Permisos Municipales (PDF):</label>
-        <input type="file" id="permisos" name="permisos" accept="application/pdf">
+        <label for="permisos">10. Subir Permisos Municipales (PDF):</label>
+        <input type="file" id="permisos" name="permitPDF" accept="application/pdf">
       </div>
       <br>
       <br>
       <div>
-        <div>
-          <button type="submit" id="botonRegistro">Registrarte</button>
-      </div>
-      
+        <button id="botonRegistro">Registrarte</button>
       </div>
     </div>
     <br>
     <br>
-
   </form>
-</body>
+</div>
 
 </html>

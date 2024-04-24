@@ -12,6 +12,7 @@ async function renderLayout() {
     components["nav"] = await getComponent("nav");
     components["footer"] = await getComponent("footer");
     bodyEl.innerHTML = `${components.nav} ${bodyEl.innerHTML} ${components.footer}`;
+}
 
  // Obtener el botón "crear cuenta"
  /*const crearCuentaBtn = document.querySelector('input[value="crear cuenta"]');
@@ -38,7 +39,7 @@ async function renderLayout() {
 
 async function postData(url = '', data = {}) {
     try {
-        const response = await fetch(url, {
+        const response =  fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -58,30 +59,42 @@ async function postData(url = '', data = {}) {
 }
 
 // Handle click event
+
 async function handleClick() {
     try {
-        const email = document.getElementById("emailInput").value;
-        const password = document.getElementById("passwordInput").value;
+        const apiUrl = 'https://tienda.com/api/login'; // Endpoint para obtener datos del usuario
+        const response = await postData(apiUrl);
         
-        const apiUrl = 'https://tienda.com/api/login';
-        const postDataExample = {"email": email, "password": password};
-        
-        const response = await postData(apiUrl, postDataExample);
-        
-        console.log("response =", response);
-        
-        if (response.message === "Invalid email or password") {
-            alert("Invalid User or password");
-            return;
+        if (!response.ok) {
+            throw new Error('Network response was not ok.');
         }
         
-        localStorage.setItem("user", JSON.stringify(response));
-        console.log(localStorage.getItem("user"));
+        return response.json();
     } catch (error) {
-        alert("No login");
+        console.error('Error:', error);
+        throw new Error('Failed to fetch user data');
     }
 }
 
+// Mostrar datos del usuario en la página
+async function showUserProfile() {
+    try {
+        const userData = await getUserData();
+        
+        // Rellenar los campos del perfil con los datos del usuario
+        document.getElementById("nombre").textContent = userData.name;
+        document.getElementById("apellidos").textContent = userData.lastName;
+        document.getElementById("correo").textContent = userData.email;
+        document.getElementById("telefono").textContent = userData.phone || "N/A";
+        document.getElementById("direccion").textContent = userData.address || "N/A";
+    } catch (error) {
+        console.error('Error:', error);
+        alert("No se pudo cargar el perfil del usuario");
+    }
+}
+
+// Evento al cargar la página
+/*window.addEventListener("load", showUserProfile);*/
+
 const button = document.getElementById("myButton");
 button.addEventListener("click", handleClick);
-}

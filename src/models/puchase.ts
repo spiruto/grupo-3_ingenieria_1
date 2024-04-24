@@ -5,7 +5,10 @@ const saleSchema = new mongoose.Schema({
     quantity: { type: Number, required: true },
     totalPrice: { type: Number, required: true },
     user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-    store: { type: mongoose.Schema.Types.ObjectId, ref: 'Store', required: true }
+    store: { type: mongoose.Schema.Types.ObjectId, ref: 'Store'},
+    seller: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true } // Referencia al vendedo
+},{
+    timestamps: true // Genera automáticamente campos createdAt y updatedAt
 });
 
 const Sale = mongoose.model('Sale', saleSchema);

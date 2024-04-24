@@ -5,7 +5,7 @@ const Inventory = require('../models/inventory.ts');
 // GET: Obtener todos los registros de inventario
 router.get('/', async (req, res) => {
     try {
-        const inventory = await Inventory.find().populate('store').populate('product');
+        const inventory = await Inventory.find().populate('store').populate('product').populate('seller');
         res.json(inventory);
     } catch (error) {
         console.error(error);
@@ -16,8 +16,8 @@ router.get('/', async (req, res) => {
 // POST: Agregar un nuevo registro de inventario
 router.post('/', async (req, res) => {
     try {
-        const { store, product, quantity } = req.body;
-        const newInventoryItem = new Inventory({ store, product, quantity });
+        const { seller, product, quantity } = req.body;
+        const newInventoryItem = new Inventory({ seller, product, quantity });
         const savedItem = await newInventoryItem.save();
         res.status(201).json(savedItem);
     } catch (error) {
@@ -60,5 +60,7 @@ router.get('/store/:idstore', async (req, res) => {
         res.status(500).json({ message: 'Internal Server Error' });
     }
 });
+
+
 
 module.exports = router;

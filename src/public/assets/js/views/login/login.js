@@ -2,8 +2,9 @@ import { getComponent } from "../../view-engine.js";
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    renderLayout();
+document.addEventListener("DOMContentLoaded", async () => {
+    await renderLayout();
+    hideLogins();
 });
 
 async function renderLayout() {
@@ -12,7 +13,6 @@ async function renderLayout() {
     components["nav"] = await getComponent("nav");
     components["footer"] = await getComponent("footer");
     bodyEl.innerHTML = `${components.nav} ${bodyEl.innerHTML} ${components.footer}`;
-}
 
  // Obtener el botón "crear cuenta"
  /*const crearCuentaBtn = document.querySelector('input[value="crear cuenta"]');
@@ -39,7 +39,7 @@ async function renderLayout() {
 
 async function postData(url = '', data = {}) {
     try {
-        const response =  fetch(url, {
+        const response = await fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -59,42 +59,56 @@ async function postData(url = '', data = {}) {
 }
 
 // Handle click event
-
 async function handleClick() {
     try {
-        const apiUrl = 'https://tienda.com/api/login'; // Endpoint para obtener datos del usuario
-        const response = await postData(apiUrl);
+        const email = document.getElementById("emailInput").value;
+        const password = document.getElementById("passwordInput").value;
         
-        if (!response.ok) {
-            throw new Error('Network response was not ok.');
+        const apiUrl = 'https://tienda.com/api/login';
+        const postDataExample = {"email": email, "password": password};
+        
+        const response = await postData(apiUrl, postDataExample);
+        
+        console.log("response =", response);
+        
+        if (response.message === "Invalid email or password") {
+            alert("Invalid User or password");
+            return;
         }
         
-        return response.json();
+        localStorage.setItem("user", JSON.stringify(response));
+        console.log(localStorage.getItem("user"));
     } catch (error) {
-        console.error('Error:', error);
-        throw new Error('Failed to fetch user data');
+        alert("No login");
     }
 }
-
-// Mostrar datos del usuario en la página
-async function showUserProfile() {
-    try {
-        const userData = await getUserData();
-        
-        // Rellenar los campos del perfil con los datos del usuario
-        document.getElementById("nombre").textContent = userData.name;
-        document.getElementById("apellidos").textContent = userData.lastName;
-        document.getElementById("correo").textContent = userData.email;
-        document.getElementById("telefono").textContent = userData.phone || "N/A";
-        document.getElementById("direccion").textContent = userData.address || "N/A";
-    } catch (error) {
-        console.error('Error:', error);
-        alert("No se pudo cargar el perfil del usuario");
-    }
-}
-
-// Evento al cargar la página
-/*window.addEventListener("load", showUserProfile);*/
 
 const button = document.getElementById("myButton");
 button.addEventListener("click", handleClick);
+}
+
+
+function hideLogins () {
+
+    console.log("ENTRO A LA FUNCION");
+    // Supongamos que tienes un objeto guardado en localStorage con la clave "miObjeto"
+    var user = localStorage.getItem("user");
+
+    var login1 = document.getElementById("cuenta-perfil");
+    var login2 = document.getElementById("cuenta-perfil-logged-cliente");
+    var login3 = document.getElementById("cuenta-perfil-logged-vendedor");
+
+    // Verificar si el objeto existe en localStorage
+    if (!user) {
+        login2.style.display = "none";
+        login3.style.display = "none";
+        return;
+    }
+    user = JSON.parse(user);
+    login1.style.display = "none";
+     if (user.userType === 'Cliente') {
+        login3.style.display = "none";
+     } else {
+        login2.style.display = "none";
+     }
+}

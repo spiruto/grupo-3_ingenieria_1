@@ -1,5 +1,4 @@
-// Definir la función que se ejecutará cuando se cargue la página
-function onLoadFunction() {
+function hideLogins () {
 
     console.log("ENTRO A LA FUNCION");
     // Supongamos que tienes un objeto guardado en localStorage con la clave "miObjeto"
@@ -15,12 +14,11 @@ function onLoadFunction() {
         login3.style.display = "none";
         return;
     }
-    
+    user = JSON.parse(user);
     login1.style.display = "none";
-    console.log(user);
-
-        // Puedes agregar aquí cualquier código que quieras ejecutar al cargar la página
+     if (user.userType === 'Cliente') {
+        login3.style.display = "none";
+     } else {
+        login2.style.display = "none";
+     }
 }
-
-// Agregar la función de evento directamente al evento onload del cuerpo del documento
-document.body.onload = onLoadFunction;

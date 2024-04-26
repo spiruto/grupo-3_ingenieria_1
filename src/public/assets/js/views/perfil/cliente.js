@@ -15,7 +15,6 @@ async function renderLayout() {
     layout += component;
   });
   bodyEl.innerHTML = `${components.nav} ${bodyEl.innerHTML} ${components.footer}`;
-
   getUserData2();
 }
 
@@ -90,11 +89,11 @@ function hideLogins () {
       return;
   }
   user = JSON.parse(user);
-  login1.style.display = "none";
-   if (user.userType === 'Cliente') {
-      login3.style.display = "none";
-   } else {
-      login2.style.display = "none";
+    login1.style.display = "none";
+     if (user.userType === 'Cliente') {
+        login3.style.display = "none";
+     } else if (user.userType === "Vendedor"){
+        login2.style.display = "none";
    }
 }
 

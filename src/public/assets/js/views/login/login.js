@@ -78,8 +78,14 @@ async function handleClick() {
         
         localStorage.setItem("user", JSON.stringify(response));
         console.log(localStorage.getItem("user"));
+
+        // Redireccionar a otra página
+        window.location.href = "https://tienda.com/";
+
+        // Mostrar alerta de usuario ingresado correctamente
+        alert("Usuario ingresado correctamente");
     } catch (error) {
-        alert("No login");
+        alert("Usuario o contraseña incorrectos");
     }
 }
 
@@ -108,7 +114,7 @@ function hideLogins () {
     login1.style.display = "none";
      if (user.userType === 'Cliente') {
         login3.style.display = "none";
-     } else {
+     } else if (user.userType === "Vendedor"){
         login2.style.display = "none";
      }
-}
+} 

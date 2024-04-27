@@ -14,8 +14,9 @@ const validationRules = {
     imagen: [validations.required],
 };
 let variante = 2;
-document.addEventListener("DOMContentLoaded", () => {
-    renderLayout();
+document.addEventListener("DOMContentLoaded", async () => {
+    await renderLayout();
+    hideLogins ();
     setTimeout(() => {
         document.getElementById("btn-add-variation").addEventListener("click", () => {
             document.getElementById("variants").innerHTML += `
@@ -71,3 +72,30 @@ function removeSelected() {
         }
     }
 }
+
+function hideLogins () {
+
+    console.log("ENTRO A LA FUNCION");
+    // Supongamos que tienes un objeto guardado en localStorage con la clave "miObjeto"
+    var user = localStorage.getItem("user");
+  
+    var login1 = document.getElementById("cuenta-perfil");
+    var login2 = document.getElementById("cuenta-perfil-logged-cliente");
+    var login3 = document.getElementById("cuenta-perfil-logged-vendedor");
+  
+    // Verificar si el objeto existe en localStorage
+    if (!user) {
+        login2.style.display = "none";
+        login3.style.display = "none";
+        return;
+    }
+    user = JSON.parse(user);
+    login1.style.display = "none";
+     if (user.userType === 'Cliente') {
+        login3.style.display = "none";
+     } else if (user.userType === "Vendedor"){
+        login2.style.display = "none";
+     }
+}
+  
+  

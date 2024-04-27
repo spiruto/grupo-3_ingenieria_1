@@ -7,6 +7,7 @@ function hideLogins () {
     var login1 = document.getElementById("cuenta-perfil");
     var login2 = document.getElementById("cuenta-perfil-logged-cliente");
     var login3 = document.getElementById("cuenta-perfil-logged-vendedor");
+    var login4 = document.getElementById("cuenta-perfil-logged-admin");
 
     // Verificar si el objeto existe en localStorage
     if (!user) {
@@ -18,7 +19,11 @@ function hideLogins () {
     login1.style.display = "none";
      if (user.userType === 'Cliente') {
         login3.style.display = "none";
-     } else {
+     } else if (user.userType === "Vendedor"){
         login2.style.display = "none";
+     } else if (user.userType === "admin"){
+      login2.style.display = "none";
+      login3.style.display = "none";
      }
-}
+   }
+

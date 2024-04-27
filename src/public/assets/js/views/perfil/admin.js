@@ -1,0 +1,66 @@
+import { getComponent } from "../../view-engine.js";
+
+
+
+document.addEventListener("DOMContentLoaded", async () => {
+    await renderLayout();
+    hideLogins();
+});
+
+async function renderLayout() {
+    const bodyEl = document.getElementById("root");
+    const components = {};
+    components["nav"] = await getComponent("nav");
+    components["footer"] = await getComponent("footer");
+    bodyEl.innerHTML = `${components.nav} ${bodyEl.innerHTML} ${components.footer}`;
+
+
+    async function postData(url = '', data = {}) {
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+            
+            if (!response.ok) {
+                throw new Error('Network response was not ok.');
+            }
+            
+            return response.json();
+        } catch (error) {
+            console.error('Error:', error);
+            throw new Error('Failed to fetch');
+        }
+    }
+
+    function hideLogins () {
+
+        console.log("ENTRO A LA FUNCION");
+        // Supongamos que tienes un objeto guardado en localStorage con la clave "miObjeto"
+        var user = localStorage.getItem("user");
+    
+        var login1 = document.getElementById("cuenta-perfil");
+        var login2 = document.getElementById("cuenta-perfil-logged-cliente");
+        var login3 = document.getElementById("cuenta-perfil-logged-vendedor");
+    
+        // Verificar si el objeto existe en localStorage
+        if (!user) {
+            login2.style.display = "none";
+            login3.style.display = "none";
+            return;
+        }
+        user = JSON.parse(user);
+        login1.style.display = "none";
+         if (user.userType === 'Cliente') {
+            login3.style.display = "none";
+         } else if (user.userType === "Vendedor"){
+            login2.style.display = "none";
+         } else if (user.userType === "Admin"){
+          login2.style.display = "none";
+          login3.style.display = "none";
+         }
+       }
+    }

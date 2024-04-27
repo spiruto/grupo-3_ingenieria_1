@@ -37,7 +37,8 @@ function hideLogins () {
   login1.style.display = "none";
    if (user.userType === 'Cliente') {
       login3.style.display = "none";
-   } else {
+   } else if (user.userType === "Vendedor"){
       login2.style.display = "none";
    }
+
 }

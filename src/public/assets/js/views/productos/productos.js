@@ -92,19 +92,24 @@ function onLoadFunction() {
     var login1 = document.getElementById("cuenta-perfil");
     var login2 = document.getElementById("cuenta-perfil-logged-cliente");
     var login3 = document.getElementById("cuenta-perfil-logged-vendedor");
+    var login4 = document.getElementById("cuenta-perfil-logged-admin");
 
     // Verificar si el objeto existe en localStorage
     if (!user) {
         login2.style.display = "none";
         login3.style.display = "none";
+        login4.style.display = "none";
         return;
     }
     user = JSON.parse(user);
     login1.style.display = "none";
      if (user.userType === 'Cliente') {
         login3.style.display = "none";
-     } else {
+     } else if (user.userType === "Vendedor"){
         login2.style.display = "none";
+     } else if (user.userType === "admin"){
+      login2.style.display = "none";
+      login3.style.display = "none";
      }
 
         // Puedes agregar aquí cualquier código que quieras ejecutar al cargar la página
@@ -152,14 +157,14 @@ async function renderLayout2(data) {
         <div class="product-grid">
         ${data.map(inventory =>
             `<div class="product-item">
-                <img src="${inventory.product.imageUrl}" alt="${inventory.product.name}">
+                <img src="${inventory.product && inventory.product.imageUrl ? inventory.product.imageUrl : 'placeholder_image_url'}" alt="${inventory.product && inventory.product.name ? inventory.product.name : 'Product Name'}">
                 <div class="product-content">
-                    <h3>${inventory.product.name}</h3>
-                    <p style="color:orange;"><b>${inventory.product.price}</b></p>
+                    <h3>${inventory.product && inventory.product.name ? inventory.product.name : 'Product Name'}</h3>
+                    <p style="color:orange;"><b>${inventory.product && inventory.product.price ? inventory.product.price : 'Price'}</b></p>
                     <a href="/producto?pid=${inventory._id}" class="productBtn">Ver</a>
                 </div>
             </div>`
-    ).join("")}
+        ).join("")}
         </div>
     </div>
     `

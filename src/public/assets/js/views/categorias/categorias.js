@@ -26,11 +26,13 @@ function hideLogins () {
     var login1 = document.getElementById("cuenta-perfil");
     var login2 = document.getElementById("cuenta-perfil-logged-cliente");
     var login3 = document.getElementById("cuenta-perfil-logged-vendedor");
+    var login4 = document.getElementById("cuenta-perfil-logged-admin");
 
     // Verificar si el objeto existe en localStorage
     if (!user) {
         login2.style.display = "none";
         login3.style.display = "none";
+        login4.style.display = "none";
         return;
     }
     user = JSON.parse(user);
@@ -39,5 +41,8 @@ function hideLogins () {
         login3.style.display = "none";
      } else if (user.userType === "Vendedor"){
         login2.style.display = "none";
+     } else if (user.userType === "admin"){
+      login2.style.display = "none";
+      login3.style.display = "none";
      }
-}
+    }

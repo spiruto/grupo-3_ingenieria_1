@@ -11,19 +11,20 @@ function hideLogins () {
 
     // Verificar si el objeto existe en localStorage
     if (!user) {
-        login2.style.display = "none";
-        login3.style.display = "none";
-        return;
-    }
-    user = JSON.parse(user);
-    login1.style.display = "none";
-     if (user.userType === 'Cliente') {
-        login3.style.display = "none";
-     } else if (user.userType === "Vendedor"){
-        login2.style.display = "none";
-     } else if (user.userType === "admin"){
       login2.style.display = "none";
       login3.style.display = "none";
-     }
+      login4.style.display = "none";
+      return;
+  }
+  user = JSON.parse(user);
+  login1.style.display = "none";
+   if (user.userType === 'Cliente') {
+      login3.style.display = "none";
+   } else if (user.userType === "Vendedor"){
+      login2.style.display = "none";
+   } else if (user.userType === "admin"){
+    login2.style.display = "none";
+    login3.style.display = "none";
    }
+  }
 

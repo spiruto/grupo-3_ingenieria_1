@@ -1,22 +1,8 @@
-async function postData(url = '', data = {}) {
-    // Opciones de la solicitud
-    const options = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    };
+import { getComponent } from "../../view-engine.js"
 
-    // Realizar la solicitud
-    const response = await fetch(url, options);
-    return response.json(); // Devolver el resultado como JSON
-}
-
-document.addEventListener("DOMContentLoaded", async () => {
-    await renderLayout();
-    hideLogins();
-    showProduct();
+document.addEventListener("DOMContentLoaded",  async () => {
+    //await renderLayout();
+    //hideLogins();
     
     let myButton = document.getElementById('myButton');
     myButton.addEventListener('click', handleClick);
@@ -69,43 +55,66 @@ function showProduct() {
 }
 
 async function handleClick() {
-    
-    // Obtener los valores de los campos de entrada
-const name = document.getElementById('name').value;
-const description = document.getElementById('description').value;
-const price = document.getElementById('price').value;
-const category = document.getElementById('category').value;
-const imageUrl = document.getElementById('imageUrl').value;
-const quantity = document.getElementById('quantity').value;
 
+    console.log('Entro');
 
-let inventory = JSON.parse(localStorage.getItem('inventory'))
-console.log(inventory);
-var productID = inventory.product._id;
+    const name = document.getElementById('name').value;
+    const description = document.getElementById('description').value;
+    const price = document.getElementById('price').value;
+    const category = document.getElementById('category').value;
+    const imageUrl = document.getElementById('imageUrl').value;
+    const quantity = document.getElementById('quantity').value;
 
+    const product = {
+        "name": name,
+        "description": description,
+        "price": price,
+        "category": category,
+        "imageUrl": imageUrl
+    };
 
-// Crear el objeto de datos para la solicitud PUT
-const updatedProduct = {
-    "name": name,
-    "description": description,
-    "price": price,
-    "category": category,
-    "imageUrl": imageUrl
-};
+    var parsedUser = JSON.parse(localStorage.getItem("user"));
+    var userID = parsedUser._id;
 
-// Realizar la solicitud PUT al servidor
-fetch('https://tienda.com/api/product/' +  productID, {
-    method: 'PUT',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(updatedProduct)
-}).then(response => {
-    localStorage.removeItem('inventory');
-    window.location.href = 'https://tienda.com/perfil/vendedor/productos.html';
-})
-.catch ((error) => {
-    console.error('Error:', error);
-});
+    console.log(parsedUser);
+    console.log(userID);
+
+    const inventory = {
+        product: null,
+        quantity: quantity,
+        seller: userID
+    };
+
+    fetch('https://tienda.com/api/product', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(product)
+    })
+    .then(response => {
+        return response.json();
+    })
+    .then(data => {
+        var newProduct = data;
+
+        inventory.product = newProduct._id;
+        fetch('https://tienda.com/api/inventory', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(inventory)
+        })
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            window.location.href = 'https://tienda.com/perfil/vendedor/productos.html';
+        })
+    })
+    .catch ((error) => {
+        console.error('Error:', error);
+    });
 
 }

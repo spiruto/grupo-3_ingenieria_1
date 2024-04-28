@@ -74,17 +74,23 @@ async function handleClick() {
 
 
     let inventory = JSON.parse(localStorage.getItem('inventory'))
-    console.log(inventory);
     var productID = inventory.product._id;
 
+    var parsedUser = JSON.parse(localStorage.getItem("user"));
+    var userID = parsedUser._id;
 
-    // Crear el objeto de datos para la solicitud PUT
     const updatedProduct = {
         "name": name,
         "description": description,
         "price": price,
         "category": category,
         "imageUrl": imageUrl
+    };
+
+    const updatedInventory = {
+        product: productID, 
+        seller: userID, 
+        quantity: quantity
     };
 
     // Realizar la solicitud PUT al servidor
@@ -94,9 +100,20 @@ async function handleClick() {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(updatedProduct)
-    }).then(response => {
-        localStorage.removeItem('inventory');
-        window.location.href = 'https://tienda.com/perfil/vendedor/productos.html';
+    })
+    .then(response => {
+        
+        fetch('https://tienda.com/api/inventory/' +  inventory._id, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(updatedInventory)
+        }).then(response => {
+            localStorage.removeItem('inventory');
+            window.location.href = 'https://tienda.com/perfil/vendedor/productos.html';
+        });
+        
     })
     .catch ((error) => {
         console.error('Error:', error);

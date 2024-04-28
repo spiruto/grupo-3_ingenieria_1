@@ -7,3 +7,4 @@ export const getComponent = async (componentName) => {
     }
     return null;
 };
+

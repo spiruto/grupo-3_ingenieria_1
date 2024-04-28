@@ -71,6 +71,7 @@ async function handleClick() {
         
         console.log("response =", response);
         
+
         if (response.message === "Invalid email or password") {
             alert("Invalid User or password");
             return;
@@ -94,7 +95,7 @@ button.addEventListener("click", handleClick);
 }
 
 
-function hideLogins () {
+function hideLogins() {
 
     console.log("ENTRO A LA FUNCION");
     // Supongamos que tienes un objeto guardado en localStorage con la clave "miObjeto"
@@ -116,10 +117,13 @@ function hideLogins () {
     login1.style.display = "none";
      if (user.userType === 'Cliente') {
         login3.style.display = "none";
+        login4.style.display = "none";
      } else if (user.userType === "Vendedor"){
         login2.style.display = "none";
+        login4.style.display = "none";
      } else if (user.userType === "admin"){
       login2.style.display = "none";
       login3.style.display = "none";
      }
-    }
+
+}

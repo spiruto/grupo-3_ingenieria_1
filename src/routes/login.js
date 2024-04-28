@@ -12,14 +12,19 @@ router.post('/', async (req, res) => {
         // Check if user exists
         const user = await User.findOne({ email });
         if (!user) {
-            return res.status(400).json({ message: "Invalid email or password 1" });
+            return res.status(400).json({ message: "Invalid email or password" });
         }
 
         // Check password
         const isMatch = password === user.password;
         if (!isMatch) {
-            return res.status(400).json({ message: "Invalid email or password 2" });
+            return res.status(400).json({ message: "Invalid email or password" });
         }
+
+        if (!user.active) {
+            return res.status(400).json({ message: "User is not active, please contact the Admin." });
+        }
+
         // Return user data (you may want to exclude sensitive information like password here)
         res.json(user);
     } catch (error) {

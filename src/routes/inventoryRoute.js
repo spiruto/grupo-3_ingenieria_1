@@ -13,6 +13,18 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/:id', async (req, res) => {
+    try {
+        const inventory = await Inventory.findById(req.params.id).populate('store').populate('product').populate('seller');
+        if (!inventory) {
+            return res.status(404).send();
+        }
+        res.send(inventory);
+    } catch (error) {
+        res.status(500).send(error);
+    }
+});
+
 // POST: Agregar un nuevo registro de inventario
 router.post('/', async (req, res) => {
     try {
@@ -49,10 +61,10 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
-router.get('/store/:idstore', async (req, res) => {
+router.get('/seller/:idUser', async (req, res) => {
     try {
-        let idstore = req.params.idstore;
-        const findInventories = await Inventory.find({ store: idstore}).populate("product").exec();
+        let idUser = req.params.idUser;
+        const findInventories = await Inventory.find({ seller: idUser}).populate("product").exec();
         res.json(findInventories);
 
     } catch (error) {

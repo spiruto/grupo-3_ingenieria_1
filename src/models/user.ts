@@ -14,6 +14,8 @@ const userSchema = new Schema({
     userType: { type: String, default: "Cliente"},
     permitPDF: { type: Buffer },
     address: { type: String },
+    approved: { type: Boolean, default: false },
+    active: { type: Boolean, default: true }
 });
 
 module.exports = mongoose.model('User', userSchema);

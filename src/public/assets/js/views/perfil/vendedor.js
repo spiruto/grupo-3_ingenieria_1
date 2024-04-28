@@ -3,6 +3,7 @@ import { getComponent } from "../../view-engine.js"
 document.addEventListener("DOMContentLoaded", async () => {
     await renderLayout();
     hideLogins ();
+    hidesidebar ();
 });
 
 async function renderLayout() {
@@ -69,7 +70,7 @@ function getUserData3() {
     }
   }
 
-  function hideLogins () {
+  function hideLogins() {
 
     console.log("ENTRO A LA FUNCION");
     // Supongamos que tienes un objeto guardado en localStorage con la clave "miObjeto"
@@ -91,10 +92,36 @@ function getUserData3() {
     login1.style.display = "none";
      if (user.userType === 'Cliente') {
         login3.style.display = "none";
+        login4.style.display = "none";
      } else if (user.userType === "Vendedor"){
         login2.style.display = "none";
+        login4.style.display = "none";
      } else if (user.userType === "admin"){
       login2.style.display = "none";
       login3.style.display = "none";
      }
+
+        // Puedes agregar aquí cualquier código que quieras ejecutar al cargar la página
+}
+
+function checkUserStatus() {
+    
+    var usuarioActivo = true; // Cambia esto según tu lógica de usuario activo
+
+    if (usuarioActivo) {
+        // Si el usuario está activo, ocultamos el sidebar
+        document.getElementById("sidebar").style.display = "none";
     }
+}
+
+ function hidesidebar(){
+    
+    var user = JSON.parse(localStorage.getItem("user"));
+    
+    if (!user.approved){
+        console.log(
+            user.approved
+        )
+        document.getElementById("sidebarDash").style.display = "none";
+    }
+ }

@@ -3,6 +3,7 @@ import { getComponent } from "../../view-engine.js"
 document.addEventListener("DOMContentLoaded", async () => {
     await renderLayout();
      hideLogins ();
+
 });
 
 async function renderLayout() {

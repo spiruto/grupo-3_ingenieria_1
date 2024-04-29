@@ -14,14 +14,17 @@ router.post('/', async (req, res) => {
             return res.status(400).json({ message: "Correo ya esta registrado" });
         }
         const body = req.body;
+        console.log(req.body);
         const newUser = new User({
-            name: body.name, 
-            lastName: body.lastName, 
-            email: body.email,  
-            nationalId: body.nationalId,  
-            nationalIdType: body.nationalIdType, 
-            phone: body.phone, 
-            password: body.password});
+            "name": body.name, 
+            "lastName": body.lastName, 
+            "email": body.email,  
+            "nationalId": body.nationalId,  
+            "nationalIdType": body.nationalIdType, 
+            "phone": body.phone, 
+            "password": body.password,
+            "userType": body.userType
+        });
         await newUser.save();
 
         res.status(201).json({ message: "Usuario Creado Correctamente", user: newUser });

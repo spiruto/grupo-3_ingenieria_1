@@ -2,9 +2,7 @@ import { getComponent } from "../../view-engine.js"
 
 document.addEventListener("DOMContentLoaded", async () => {
     await renderLayout();
-    hideLogins();
-    
-    
+    hideLogins(); 
 });
 
 async function renderLayout() {
@@ -25,11 +23,6 @@ function getUserData3() {
     setValue("nombre", user.name);
     setValue("apellidos", user.lastName);
     setValue("correo", user.email);
-    setValue("telefono", user.phone);
-    setValue("nationalId", user.nationalId);
-    setValue("contrasena", user.password);
-    setValue("direccion", user.address);
-    
   }
 
   function setValue(id, value) {

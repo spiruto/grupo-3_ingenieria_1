@@ -3,7 +3,7 @@ import { getComponent } from "../../view-engine.js"
 import Products from "../../../../data/products.json" with {type: "json"}
 
 document.addEventListener("DOMContentLoaded", async () => {
-     renderLayout();
+    await renderLayout();
     getListOfProducts();
     hideLogins();
 });
@@ -40,7 +40,7 @@ async function renderLayout() {
         p.title.toLowerCase().includes(productSearch && productSearch.toLowerCase().trim() || "")
         && ((category && category.toLowerCase().trim() === p.category.toLowerCase()) || !category));
     
-    bodyEl.innerHTML = `${components.nav} ${gridEl} ${components.footer}`;
+    bodyEl.innerHTML = `${components.nav} ${components.footer}`;
     renderLayout2();
 }
 

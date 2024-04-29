@@ -1,37 +1,9 @@
 import { getComponent } from "../../view-engine.js";
-import validations from "../../validations.js";
-import validateForm from "../../formValidator.js";
 
-const validationRules = {
-    nombre: [validations.required],
-    apellidos: [validations.required],
-    email: [validations.required],
-    numeroCedula: [validations.required],
-    direccion: [validations.required],
-    password: [validations.required],
-    confirm_password: [validations.required, (value, formData) => validations.confirmPassword(value, formData)],
-    comercio: [validations.required],
-    imagen: [
-        validations.required,
-        (value) => {
-            const allowedExtensions = ['.jpg', '.jpeg'];
-            const extension = value.substr(value.lastIndexOf('.')).toLowerCase();
-            return allowedExtensions.includes(extension) || 'Solo se permiten archivos JPG.';
-        }
-    ],
-    permisos: [
-        validations.required,
-        (value) => {
-            const allowedExtensions = ['.pdf'];
-            const extension = value.substr(value.lastIndexOf('.')).toLowerCase();
-            return allowedExtensions.includes(extension) || 'Solo se permiten archivos PDF.';
-        }
-    ],
-};
 
 document.addEventListener("DOMContentLoaded", async () => {
-    await renderLayout();
-    setupFormSubmission();
+     await renderLayout();
+     //setupFormSubmission();
     hideLogins();
     document.getElementById('botonRegistro').addEventListener(
         'click', setupFormSubmission);
@@ -43,7 +15,6 @@ async function renderLayout() {
     components["nav"] = await getComponent("nav");
     components["footer"] = await getComponent("footer");
     bodyEl.innerHTML = `${components.nav} ${bodyEl.innerHTML} ${components.footer}`;
-    validateForm("formRegistroVendedor", validationRules);
 }
 
 async function setupFormSubmission() {
@@ -66,11 +37,13 @@ async function setupFormSubmission() {
         "nationalId":document.getElementById("numeroCedula").value,
         "nationalIdType":documentType,
         "password": document.getElementById("password").value,
-        /*profileImage:document.getElementById("imagen"),*/
-        "userType": Vendedor
-        /*** permitPDF:document.getElementById("nombre")*/
+        "userType": "Vendedor"
+            
     }
-    await sendDataToMongoDB(data);
+    await sendDataToMongoDB(data).then (()=> {
+        alert("Vendedor creado correctamente, espere aprovacion de Admin")
+         (window.location.href = "https://tienda.com");
+    });
 }
 
 async function sendDataToMongoDB(data) {

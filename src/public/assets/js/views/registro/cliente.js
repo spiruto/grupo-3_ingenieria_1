@@ -35,7 +35,6 @@ const validationRules = {
 
 document.addEventListener("DOMContentLoaded", async () => {
   await renderLayout();
-    setupFormSubmission();
     hideLogins();
     document.getElementById('botonRegistro').addEventListener(
       'click', setupFormSubmission);
@@ -70,12 +69,16 @@ let data = {
   "nationalId":document.getElementById("numeroCedula").value,
   "nationalIdType":documentType,
   "password": document.getElementById("password").value,
-  "address":document.getElementById("address").value
+  "address":document.getElementById("address").value,
+  "userType": "Cliente"
   /*profileImage:document.getElementById("imagen"),*/
   
   /*permitPDF:document.getElementById("nombre")*/
 }
-await sendDataToMongoDB(data);
+await sendDataToMongoDB(data).then (()=> {
+  alert("Usuario correctamente Creado")
+   (window.location.href = "https://tienda.com");
+});
 }
 
 async function sendDataToMongoDB(data) {
@@ -117,6 +120,10 @@ function hideLogins() {
       login3.style.display = "none";
       login4.style.display = "none";
       return;
+
+
+     
+}
   }
   user = JSON.parse(user);
   login1.style.display = "none";
@@ -130,9 +137,5 @@ function hideLogins() {
     login2.style.display = "none";
     login3.style.display = "none";
    }
-
-     
-}
-
 
 

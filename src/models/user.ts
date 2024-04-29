@@ -11,7 +11,7 @@ const userSchema = new Schema({
     password: { type: String, required: true },
     profileImage: { type: Buffer },
     paymentMethod: { type: String},
-    userType: { type: String, default: "Cliente"},
+    userType: { type: String},
     permitPDF: { type: Buffer },
     address: { type: String },
     approved: { type: Boolean, default: false },

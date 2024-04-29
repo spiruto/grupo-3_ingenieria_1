@@ -1,4 +1,5 @@
 
+
 document.addEventListener("DOMContentLoaded", async () => {
     console.log("entro!!");
     await loadUsers();
@@ -17,7 +18,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 async function loadUsers() {
     try {
-        const response = await fetch('https://tienda.com/api/user'); // Assuming your route is mounted at '/users'
+        const response = await fetch('https://tienda.com/api/user');
         const users = await response.json();
         
         if (response.ok) {

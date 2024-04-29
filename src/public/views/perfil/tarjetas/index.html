@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agegar Metodo de Pago</title>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <script src="https://kit.fontawesome.com/07863389f0.js" crossorigin="anonymous"></script>
+  <script type="module" src="../../../assets/js/views/perfil/agregarTarjeta.js"></script>
+</head>
+
+<body id="root">
+  <section class="agregar-tarjeta">
+    <form id="agregarTarjetaForm" class="agregar-tarjeta">
+      <div class='credit-info-content'>
+        <img src='https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png' height='80'
+          class='credit-card-image' id='credit-card-image'></img>
+
+        <div class="section-input" id="validacionTarjetaCredito"> 
+          <div class="card">
+            <label >Numero de tarjeta</label>
+            <input id="card-number" class='input-field' name="cardNumber"> 
+          </div>
+          <div class="card">
+            <label >Nombre en tarjeta</label>
+            <input id="card-name" class='input-field' name="name"> 
+          </div>
+          <div class="card">
+            <label >Vencimiento</label>
+            <input id="card-expiry" class='input-field'  name="expirationDate"> <!-- Cambio en el name -->
+          </div>
+          <div class="card">
+            <label >CVC</label>
+            <input id="card-cvc" class='input-field'  name="cvc"> <!-- Cambio en el name -->
+          </div>
+          <div class="container-btn">
+            <button class='btn-cancelar' >cancelar</button>
+            <button type="submit" class='btn-agregar' id="myButton">agregar</button>
+          </div>
+        </div>
+
+      </div>
+    </form>
+  </section>
+</body>
+
+</html>
+
+</html>

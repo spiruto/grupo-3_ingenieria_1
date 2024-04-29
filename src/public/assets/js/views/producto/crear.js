@@ -1,8 +1,8 @@
 import { getComponent } from "../../view-engine.js"
 
 document.addEventListener("DOMContentLoaded",  async () => {
-    //await renderLayout();
-    //hideLogins();
+    await renderLayout();
+    hideLogins();
     
     let myButton = document.getElementById('myButton');
     myButton.addEventListener('click', handleClick);
@@ -10,11 +10,15 @@ document.addEventListener("DOMContentLoaded",  async () => {
 
 async function renderLayout() {
     const bodyEl = document.getElementById("root");
-    const nav = `<nav>...</nav>`; // Aquí deberías colocar el código HTML de tu barra de navegación
-    const footer = `<footer>...</footer>`; // Aquí deberías colocar el código HTML de tu pie de página
-
-    bodyEl.innerHTML = `${nav} ${bodyEl.innerHTML} ${footer}`;
-}
+    const components = {};
+    components["nav"] = await getComponent("nav");
+    components["footer"] = await getComponent("footer");
+    let layout = "";
+    Object.values(components).forEach((component) => {
+      layout += component;
+    });
+    bodyEl.innerHTML = `${components.nav} ${bodyEl.innerHTML} ${components.footer}`;
+  }
 
 function hideLogins() {
     var user = localStorage.getItem("user");

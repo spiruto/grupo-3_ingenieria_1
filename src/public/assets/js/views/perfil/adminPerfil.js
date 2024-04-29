@@ -2,7 +2,9 @@ import { getComponent } from "../../view-engine.js"
 
 document.addEventListener("DOMContentLoaded", async () => {
     await renderLayout();
-     hideLogins ();
+    hideLogins();
+    
+    
 });
 
 async function renderLayout() {
@@ -29,14 +31,14 @@ function getUserData3() {
     setValue("direccion", user.address);
     
   }
-  
+
   function setValue(id, value) {
-        const parentElement = document.getElementById(id);
-        const paragraphElement = parentElement.querySelector('span');
-        paragraphElement.textContent = value;
-  }
-  
-  async function getUserData() {
+    const parentElement = document.getElementById(id);
+    const paragraphElement = parentElement.querySelector('span');
+    paragraphElement.textContent = value;
+}
+
+async function getUserData() {
     try {
         const apiUrl = 'https://tienda.com/api/user'; // Endpoint para obtener datos del usuario
         const response = await fetch(apiUrl);
@@ -103,24 +105,3 @@ function getUserData3() {
         // Puedes agregar aquí cualquier código que quieras ejecutar al cargar la página
 }
 
-function checkUserStatus() {
-    
-    var usuarioActivo = true; // Cambia esto según tu lógica de usuario activo
-
-    if (usuarioActivo) {
-        // Si el usuario está activo, ocultamos el sidebar
-        document.getElementById("sidebar").style.display = "none";
-    }
-}
-
- function hidesidebar(){
-    
-    var user = JSON.parse(localStorage.getItem("user"));
-    
-    if (!user.approved){
-        console.log(
-            user.approved
-        )
-        document.getElementById("sidebarDash").style.display = "none";
-    }
- }

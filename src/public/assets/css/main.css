@@ -747,8 +747,9 @@ li a {
 }
 
 .productBtn {
+  margin-top: 5px;
   padding: 5px;
-  width: 15%;
+  width: 25%;
   background-color: var(--color-info);
   border: none;
   border-radius: 10px;
@@ -1014,57 +1015,65 @@ h4 {
 }
 
 .credit-info-content {
-  padding: var(--text-gap);
-  display: grid;
-  background-color: var(--color-info);
-  color: var(--color-secondary);
-  border-radius: var(--border-1);
+  padding: 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .section-input {
   display: grid;
-  grid-gap: var(--text-gap);
-  padding-left: var(--text-gap);
+  grid-gap: 15px;
 }
 
 .card {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: var(--text-gap);
+  width: 300px !important;
+}
+
+.card label {
+  margin-bottom: 5px;
+}
+
+.input-field {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
 }
 
 .container-btn {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
-  margin-top: var(--text-gap);
+  margin-top: 20px;
+}
+
+.btn-cancelar,
+.btn-agregar {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .btn-cancelar {
-  color: var(--color-secondary);
-  background-color: var(--color-success);
-  border: transparent;
-  padding: 3px;
-  transition: 0.3s;
-}
-
-.btn-cancelar:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-success);
+  background-color: #ff6b6b;
+  color: #fff;
 }
 
 .btn-agregar {
-  color: var(--color-secondary);
-  background-color: var(--color-success);
-  border: transparent;
-  padding: 3px;
-  transition: 0.3s;
+  background-color: #4caf50;
+  color: #fff;
 }
 
+.btn-cancelar:hover,
 .btn-agregar:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-success);
+  background-color: #333;
 }
+
 
 /*carrito*/
 
@@ -1675,4 +1684,24 @@ button[type="buttonTipoCuenta"]:hover {
   height: 150px; 
   width: auto; 
   border-radius: 10px;
+}
+
+.wrapperCrearProducto {
+  margin-top: 80px;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  
+}
+
+.wrapperCrearProducto label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
 }

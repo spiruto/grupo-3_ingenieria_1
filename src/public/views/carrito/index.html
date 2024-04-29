@@ -8,21 +8,79 @@
   <link rel="stylesheet" href="/assets/css/main.css" />
   <script src="https://kit.fontawesome.com/07863389f0.js" crossorigin="anonymous"></script>
   <script type="module" src="../../assets/js/views/carrito/carrito.js"></script>
+  <style>
+    table {
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+        border: 3px solid purple;
+    }
+
+    th, td {
+        padding: 20px;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    button {
+        padding: 5px 10px;
+    }
+</style>
 </head>
 
 <body id="root">
-  <section class="carrito">
-    <div class="boxPerfilVendedor">
-      Nombre: <span class="productName" id=" ">Producto 1</span> <span class="subtotal" id=" "></span>
-    </div>
-  
-    <div class="boxPerfilVendedor">
-      Nombre: <span class="productName" id=" ">Producto 2</span> <span class="subtotal" id=" "></span>
-    </div>
-  
-    <div class="boxPerfilVendedor">
-      Nombre: <span class="productName" id=" ">Producto 3</span> <span class="subtotal" id=" "></span>
-    </div>
+    <table>
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Total</th>
+              <th>Delete</th>
+          </tr>
+      </thead>
+      <tbody id="tableBody">
+      </tbody>
+  </table>
+  <button onclick="purchase()">Purchase Order</button>
 </body>
+<script>
+  function purchase() {
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    let user = JSON.parse(localStorage.getItem("user"));
+    
+    cart.forEach(product => {
+      let total = product.qty * product.price;
+
+      fetch("https://tienda.com/api/purchase", {
+        method: 'POST',
+        headers: {
+              'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          "product": product.id,
+          "quantity": product.qty,
+          "totalPrice": total,
+          "user": user._id
+        })
+      }).then(response => {
+        return response.json();
+      }).then(data => {
+        console.log(data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+      
+    });
+    alert("Compra registrada!!");
+    localStorage.removeItem("cart");
+    window.location.href = "https://tienda.com";
+
+  }  
+</script>
 
 </html>
